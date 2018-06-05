@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<info>
+	<infoitem key="UD_WF" value="name:id;datatype:int,name:device_id;datatype:string,name:date_pr;datatype:date,name:localtion;datatype:string,name:brand;datatype:string,name:model;datatype:string,name:status;datatype:string" />
+	<infoitem key="UD_OF" value="name:id;datatype:int,name:device_id;datatype:string,name:date_pr;datatype:date,name:localtion;datatype:string,name:brand;datatype:string,name:model;datatype:string,name:status;datatype:string" />
+	<infoitem key="UD_IOF" value="name:id;datatype:int,name:device_id;datatype:string,name:date_pr;datatype:date,name:localtion;datatype:string,name:brand;datatype:string,name:model;datatype:string,name:status;datatype:string" />
+</info>
