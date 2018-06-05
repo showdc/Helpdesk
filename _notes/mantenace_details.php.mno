@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<info>
+	<infoitem key="UD_MAD" value="name:id;datatype:int,name:datepicker;datatype:date,name:device_id;datatype:string,name:username;datatype:string,name:department;datatype:string,name:position_user;datatype:string,name:details;datatype:string,name:repair_by;datatype:string,name:position;datatype:string,name:coment;datatype:string" />
+	<infoitem key="UD_DMA" value="name:id;datatype:int,name:datepicker;datatype:date,name:device_id;datatype:string,name:username;datatype:string,name:department;datatype:string,name:position_user;datatype:string,name:details;datatype:string,name:repair_by;datatype:string,name:position;datatype:string,name:coment;datatype:string" />
+</info>

@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<info>
+	<infoitem key="UD_Computer" value="name:id;datatype:int,name:device_id;datatype:string,name:date_pr;datatype:date,name:username;datatype:string,name:position;datatype:string,name:department;datatype:string,name:images;datatype:string,name:ip;datatype:string,name:cpu;datatype:string,name:mainboard;datatype:string,name:ram;datatype:string,name:vga;datatype:string,name:harddisk;datatype:string,name:optical_drive;datatype:string,name:monitor;datatype:string,name:mouse;datatype:string,name:keyboard;datatype:string,name:network;datatype:string,name:os;datatype:string,name:license;datatype:string" />
+</info>

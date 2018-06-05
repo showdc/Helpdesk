@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<info>
+	<infoitem key="UD_dep" value="name:id;datatype:int,name:department;datatype:string" />
+	<infoitem key="UD_priority" value="name:id;datatype:int,name:priority;datatype:string" />
+	<infoitem key="UD_problem" value="name:id;datatype:int,name:problem;datatype:string" />
+</info>
