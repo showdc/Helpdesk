@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<info>
+	<infoitem key="UD_RD" value="name:id;datatype:int,name:name;datatype:string,name:datepicker;datatype:date,name:time;datatype:string,name:department;datatype:string,name:piority;datatype:string,name:subject;datatype:string,name:problem;datatype:string,name:details;datatype:string,name:comment;datatype:string,name:status;datatype:string" />
+	<infoitem key="UD_User" value="name:id;datatype:int,name:name;datatype:string,name:datepicker;datatype:date,name:time;datatype:string,name:department;datatype:string,name:piority;datatype:string,name:subject;datatype:string,name:problem;datatype:string,name:details;datatype:string,name:comment;datatype:string,name:status;datatype:string" />
+</info>

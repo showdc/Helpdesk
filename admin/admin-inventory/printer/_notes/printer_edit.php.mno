@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<info>
+	<infoitem key="UD_PrinterEdit" value="name:id;datatype:int,name:device_id;datatype:string,name:date_pr;datatype:date,name:username;datatype:string,name:position;datatype:string,name:brand;datatype:string,name:model;datatype:string,name:department;datatype:string,name:status;datatype:string,name:images;datatype:string" />
+</info>

@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<info>
+	<infoitem key="UD_EPT" value="name:id;datatype:int,name:priority;datatype:string" />
+</info>
