@@ -167,7 +167,7 @@ code {
 <table width="100%" border="0">
   <tr>
     <td width="240" height="34" align="left"><img src="../images/helpdesk logo.png" width="300" height="72"></td>
-    <td width="753" align="center"><p><strong><img src="http://www.ufocool.com/images/flag/thailand.gif">&nbsp;&nbsp;Edit :: Priority</strong><strong>&nbsp;&nbsp;<img src="http://www.ufocool.com/images/flag/thailand.gif"></strong></p></td>
+    <td width="753" align="center"><p><strong>&nbsp;&nbsp;Edit :: Priority</strong><strong>&nbsp;&nbsp;</strong></p></td>
     <td width="329" align="center"><strong>
     <button type="button" class="btn btn-success"><i class="icon-calendar"></i>&nbsp;Date :: Time : <?php echo $date."&nbsp;/&nbsp;".$time;?></strong></button></td>
   </tr>

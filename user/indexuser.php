@@ -20,7 +20,7 @@ if ((isset($_GET['doLogout'])) &&($_GET['doLogout']=="true")){
   unset($_SESSION['MM_UserGroup']);
   unset($_SESSION['PrevUrl']);
 	
-  $logoutGoTo = "../index.php";
+  $logoutGoTo = "../indexuser.php";
   if ($logoutGoTo) {
     header("Location: $logoutGoTo");
     exit;
@@ -60,7 +60,7 @@ function isAuthorized($strUsers, $strGroups, $UserName, $UserGroup) {
   return $isValid; 
 }
 
-$MM_restrictGoTo = "../ind.php";
+$MM_restrictGoTo = "../indexuser.php";
 if (!((isset($_SESSION['MM_Username'])) && (isAuthorized("",$MM_authorizedUsers, $_SESSION['MM_Username'], $_SESSION['MM_UserGroup'])))) {   
   $MM_qsChar = "?";
   $MM_referrer = $_SERVER['PHP_SELF'];
@@ -162,39 +162,28 @@ if (!empty($_SERVER['QUERY_STRING'])) {
 }
 $queryString_AND = sprintf("&totalRows_AND=%d%s", $totalRows_AND, $queryString_AND);
 ?>
+
+
+?>
+
 <!DOCTYPE html>
-<tml lang="en">
-<head>
-<meta charset="utf-8">
-<title>:: Wecome Administrator</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="">
-<meta name="author" content="">
-<script type="text/javascript">
+<html lang="en">
+    <head>
+    <meta charset="utf-8">
+    <title>:: Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
 
-function Nxtpage(){
-	
-var r=confirm ('Are you sure?');
-
-if(r==true){
-	
-	window.localtion="admin_index.php";
-	}
-	else{
-		
-		return false;
-		}	
-}
-</script>
-<!-- Le styles -->
-<link href="assets/css/bootstrap.css" rel="stylesheet">
-<style type="text/css">
+    <!-- Le styles -->
+    <link href="../assets/css/bootstrap.css" rel="stylesheet">
+    <style type="../text/css">
 /* Sticky footer styles
       -------------------------------------------------- */
 
-      html, body {
+      html,  body {
 	height: 100%;/* The html and body elements cannot have any padding or margin. */
-}
+      }
 /* Wrapper for page content to push down footer */
       #wrap {
 	min-height: 100%;
@@ -204,7 +193,7 @@ if(r==true){
         margin: 0 auto -60px;
 }
 /* Set the fixed height of the footer here */
-      #push, #footer {
+      #push,  #footer {
 	height: 60px;
 }
 #footer {
@@ -234,96 +223,141 @@ code {
 	font-size: 80%;
 }
 </style>
-<link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
+    <link href="../assets/css/bootstrap-responsive.css" rel="stylesheet">
 
-<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
-<!--[if lt IE 9]>
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
       <script src="../assets/js/html5shiv.js"></script>
     <![endif]-->
 
-<!-- Fav and touch icons -->
-<link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
-<link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
-<link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
-<link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
-<link rel="shortcut icon" href="assets/ico/favicon.png">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-</head>
+    <!-- Fav and touch icons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../assets/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png">
+    <link rel="shortcut icon" href="../assets/ico/favicon.png">
 
-<body background="images/1180422460.gif">
+    <meta http-equiv="Content-Type" content="../text/html; charset=utf-8">
+
+<body background="../images/1180422460.gif">
 
 <!-- Part 1: Wrap all page content here -->
 <div id="wrap">
 
 <!-- Fixed navbar -->
 <div class="navbar navbar-fixed-top">
-  <div class="navbar-inner">
+      <div class="navbar-inner">
     <div class="container">
-      <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-    <a class="brand" href="#"><font color="#660033"> <b>IT Helpdesk</b></font></a>  
-      <div class="nav-collapse collapse">
+          <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+
+         <a class="brand" href="#"><font color="#660033"> <b>IT Helpdesk</b></font></a>  
+          <div class="nav-collapse collapse">
+
         <ul class="nav">
-          <li><a href="index.php"><i class="icon-home"></i>&nbsp; <font color="#ooooFF"><b>Home</a></b></font></li>
-          <li><a href="adduser.php"><i class="icon-user"></i>&nbsp;Add_User</a></li>
-          <li><a href="add_department.php"><i class="icon-cog"></i>&nbsp;Add_Department</a></li>
-          <li><a href="add_priority.php"><i class="icon-cog"></i>&nbsp;Add_Priority</a></li>
-          <li><a href="add_problem.php"><i class="icon-cog"></i>&nbsp;Add_Problem</a></li>
-          
-          <li><a href="menu_report.php"><i class="icon-book"></i>&nbsp;Report</a></li>
 
-             <li><a href="../indexlogin.php"><i class="icon-user"></i>&nbsp; <font color="red"><b>Logout</a></font></b></font></li>
+              <li><a href="dex.php"><i class="icon-home"></i>&nbsp; <font color="#ooooFF"><b>Home</a></b></font></li>
 
-          
-        </ul>
+              <li><a href="addjob.php"><i class="icon-file"></i>&nbsp;Add Job</a></li>
+
+              <li><a href="mantenace.php"><i class="icon-wrench"></i>&nbsp;Maintennace</a></li>
+
+              <li><a href="inventory.php"><i class="icon-barcode"></i>&nbsp;Inventory</a></li>
+
+              <li><a href="ind.php"><i class="icon-user"></i>&nbsp;Administrator</a></li>
+
+              <li><a href="../login.php"><i class="icon-user"></i>&nbsp; <font color="red"><b>Logout</a></font></b></font></li>
+
+            </ul>
         </li>
         </ul>
       </div>
-      <!--/.nav-collapse --> 
-    </div>
+<!--/.nav-collapse --> 
+        </div>
   </div>
-</div>
-<p></p>
-
+    </div>
+<p><br>
   <?
- date_default_timezone_set("Asia/Bangkok");
+     
+     date_default_timezone_set("Asia/Bangkok");
+ 
     $date = date("d-m-Y");
     $time = date("H:i");
     ?>
 </p>
-<br>
-<p>
-<p>
 <table width="100%" border="0">
-  <tr>
-    <td width="240" height="34" align="left"><img src="../images/helpdesk logo.png" width="300" height="72"></td>
-    <td width="753" align="center"><p><strong>&nbsp;&nbsp;<h3>Welcome to Administrator index </h3> </strong><strong>&nbsp;&nbsp;</p></td>
-    <td width="329" align="center"><strong>
-    <button type="button" class="btn btn-success"><i class="icon-calendar"></i>&nbsp;Date :: Time : <?php echo $date."&nbsp;/&nbsp;".$time;?></strong></button></td>
+      <tr>
+    <td width="300" height="109" align="left"><img src="../images/helpdesk logo.png" width="300" height="72"></td>
+    <td width="678" align="center">
+    &nbsp;<br><h5>Total tickets on system &nbsp; <?php echo $totalRows_AJ ?> &nbsp; Tickets</h5></br>&nbsp;&nbsp;</strong></td>
+
+    <td width="361" align="center"><strong><button type="button" class="btn btn-success"><i class="icon-calendar"></i>&nbsp;Date :: Time : <?php echo $date."&nbsp;/&nbsp;".$time;?></strong></button></td>
   </tr>
 </table>
-<table width="100%" border="0" class="table table-bordered">
+
+<script src="../js/bootstrap.min.js"></script>
+<table width="100%" border="0" class="table table-bordered"  >
   <tr class="btn-success">
-    <td width="10%"><strong><i class="icon-user"></i>&nbsp;Username</strong></td>
-    <td width="12%"><strong><i class="icon-calendar"></i>&nbsp;Date :: Time</strong></td>
-    <td width="56%"><strong><i class="icon-file"></i>&nbsp;Details</strong></td>
-    <td width="10%"><strong><i class="icon-time"></i>&nbsp;Status</strong></td>
-    <td colspan="2"><strong><i class="icon-cog"></i>&nbsp;Option</strong></td>
+    <td width="8%" align="center"><strong><i class="icon-user"></i>&nbsp;Name</strong></td>
+    <td width="11%" align="center"><strong><i class="icon-calendar"></i>&nbsp;Date :: Time</strong></td>
+    <td width="11%" align="center"><strong><i class="icon-home"></i>&nbsp;Department</strong></td>
+    <td width="30%" align="center"><strong><i class="icon-file"></i>&nbsp;Details</strong></td>
+    <td width="8%" align="center"><strong><i class="icon-time"></i>&nbsp;Status</strong></td>
+    <td width="15%" align="center"><strong><i class="icon-comment"></i>&nbsp;Commen</strong></td>
+    <td colspan="10"><strong><i class="icon-cog"></i>&nbsp;Option</strong></td>
   </tr>
+
   <?php do { ?>
     <tr>
-      <td><?php echo $row_AND['name']; ?></td>
-      <td><?php echo $row_AND['datepicker']; ?> <strong>:</strong> <?php echo $row_AND['time']; ?></td>
-      <td><?php echo $row_AND['details']; ?></td>
-      <td><?php echo $row_AND['status']; ?></td>
-      <td width="6%"><a href="edit_adjob.php?id=<?php echo $row_AND['id']; ?>">
+      <td><?php echo $row_AJ ['name']; ?></td>
+      <td><?php echo $row_AJ['datepicker']; ?> <strong>/ </strong><?php echo $row_AJ['time']; ?></td>
+      <td><?php echo $row_AJ['department']; ?></td>
+      <td><a href="sendoutsite_report.php?id=<?php echo $row_AJ['id']; ?>"><?php echo $row_AJ['details']; ?></a></td>
+      <td><?php echo $row_AJ['status']; ?></td>
+      <td><?php echo $row_AJ['comment']; ?></td>
+
+       <td width="6%"><a href="editjob.php?id=<?php echo $row_AND['id']; ?>">
         <button type="button" name="btnsubmit" class="btn btn-mini btn-success"><i class="icon-pencil"></i>&nbsp;Edit&nbsp;&nbsp;&nbsp;&nbsp;</button>
       </a></td>
-      <td width="6%"><a href="delete_helpdesk.php?id=<?php echo $row_AND['id']; ?>">
-        <button type="button" name="btnremove" class="btn btn-mini btn-danger" onClick="Nxtpage()"><i class="icon-trash"></i>&nbsp;Delete</button>
-      </a></td>
+
+     
+
     </tr>
-    <?php } while ($row_AND = mysql_fetch_assoc($AND)); ?>
+    <?php } while ($row_AJ = mysql_fetch_assoc($AJ));($row_AND = mysql_fetch_assoc($AND)); ?>
+
+   
 </table>
+<strong>&nbsp;&nbsp;<i class="icon-home"></i>&nbsp;ค้นหาข้อมูลเป็นแผนก</strong>
+  </p>
+<div class="row">
+  <div class="span4" align="left">
+    <form action="../search.php" method="post" name="search">
+    &nbsp;&nbsp;<input name="search" type="text" class="form-control" id="textfield" value="front office" /><br/>
+    &nbsp;&nbsp;<button name="btnSeacrch" type="submit" class="btn btn-success" id="btnSeacrch"><i class="icon-search"></i>&nbsp;ค้นหาข้อมูล</button>
+  </form>
+  </div>
+  <div class="span5" align="center">
+  <table width="38%" height="46" border="0" align="center">
+      <tr>
+    <td height="42" align="center"><?php if ($pageNum_AJ > 0) { // Show if not first page ?>
+            <a href="<?php printf("%s?pageNum_AJ=%d%s", $currentPage, 0, $queryString_AJ); ?>"><button type="button" class="btn btn-mini btn-success">&nbsp;&nbsp;<i class="icon-fast-backward"></i>&nbsp;&nbsp;</button></a>
+        <?php } // Show if not first page ?></td>
+
+    <td align="center"><?php if ($pageNum_AJ > 0) { // Show if not first page ?>
+            <a href="<?php printf("%s?pageNum_AJ=%d%s", $currentPage, max(0, $pageNum_AJ - 1), $queryString_AJ); ?>"><button type="button" class="btn btn-mini btn-success">&nbsp;&nbsp;<i class="icon-backward"></i>&nbsp;&nbsp;</button></a>
+        <?php } // Show if not first page ?></td>
+
+    <td align="center"><?php if ($pageNum_AJ < $totalPages_AJ) { // Show if not last page ?>
+            <a href="<?php printf("%s?pageNum_AJ=%d%s", $currentPage, min($totalPages_AJ, $pageNum_AJ + 1), $queryString_AJ); ?>"><button type="button" class="btn btn-mini btn-success">&nbsp;&nbsp;<i class=" icon-forward"></i>&nbsp;&nbsp;</button></a>
+        <?php } // Show if not last page ?></td>
+
+    <td align="center"><?php if ($pageNum_AJ < $totalPages_AJ) { // Show if not last page ?>
+            <a href="<?php printf("%s?pageNum_AJ=%d%s", $currentPage, $totalPages_AJ, $queryString_AJ); ?>"><button type="button" class="btn btn-mini btn-success">&nbsp;&nbsp;<i class="icon-fast-forward"></i>&nbsp;&nbsp;</button></a>
+        <?php } // Show if not last page ?></td>
+  </tr>
+    </table>
+  </div>
+</div>
+
 <!-- Le javascript
     ================================================== --> 
 <!-- Placed at the end of the document so the pages load faster --> 
@@ -339,26 +373,9 @@ code {
 <script src="assets/js/bootstrap-button.js"></script> 
 <script src="assets/js/bootstrap-collapse.js"></script> 
 <script src="assets/js/bootstrap-carousel.js"></script> 
-<script src="assets/js/bootstrap-typeahead.js"></script> 
-<script src="js/bootstrap.min.js"></script>
-<table width="200" border="0" align="center">
-  <tr>
-    <td align="center"><?php if ($pageNum_AND > 0) { // Show if not first page ?>
-        <a href="<?php printf("%s?pageNum_AND=%d%s", $currentPage, 0, $queryString_AND); ?>"><button type="button" class="btn btn-mini btn-success"><i class="icon-fast-backward"></i></button></a>
-    <?php } // Show if not first page ?></td>
-    <td align="center"><?php if ($pageNum_AND > 0) { // Show if not first page ?>
-        <a href="<?php printf("%s?pageNum_AND=%d%s", $currentPage, max(0, $pageNum_AND - 1), $queryString_AND); ?>"><button type="button" class="btn btn-mini btn-success"><i class="icon-backward"></i></button></a>
-    <?php } // Show if not first page ?></td>
-    <td align="center"><?php if ($pageNum_AND < $totalPages_AND) { // Show if not last page ?>
-        <a href="<?php printf("%s?pageNum_AND=%d%s", $currentPage, min($totalPages_AND, $pageNum_AND + 1), $queryString_AND); ?>"><button type="button" class="btn btn-mini btn-success"><i class="icon-forward"></i></button></a>
-    <?php } // Show if not last page ?></td>
-    <td align="center"><?php if ($pageNum_AND < $totalPages_AND) { // Show if not last page ?>
-        <a href="<?php printf("%s?pageNum_AND=%d%s", $currentPage, $totalPages_AND, $queryString_AND); ?>"><button type="button" class="btn btn-mini btn-success"><i class="icon-fast-forward"></i></button></a>
-    <?php } // Show if not last page ?></td>
-  </tr>
-</table>
+<script src="assets/js/bootstrap-typeahead.js"></script>
 </body>
 </html>
 <?php
-mysql_free_result($AND);
+mysql_free_result($AJ);
 ?>

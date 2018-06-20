@@ -171,15 +171,18 @@ code {
   <div class="navbar-inner">
     <div class="container">
       <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-      <a class="brand" href="#">IT Helpdesk</a>
+     <a class="brand" href="#"><font color="#660033"> <b>IT Helpdesk</b></font></a>  
       <div class="nav-collapse collapse">
         <ul class="nav">
-          <li><a href="index.php"><i class="icon-home"></i>&nbsp;Home</a></li>
-          <li><a href="adduser"><i class="icon-user"></i>&nbsp;Add_User</a></li>
+          <li><a href="index.php"><i class="icon-home"></i>&nbsp; <font color="#ooooFF"><b>Home</a></b></font></li>
+          <li><a href="adduser.php"><i class="icon-user"></i>&nbsp;Add_User</a></li>
           <li><a href="add_department.php"><i class="icon-cog"></i>&nbsp;Add_Department</a></li>
           <li><a href="add_priority.php"><i class="icon-cog"></i>&nbsp;Add_Priority</a></li>
           <li><a href="add_problem.php"><i class="icon-cog"></i>&nbsp;Add_Problem</a></li>
-          <li><a href="menu_report.php"><i class="icon-book"></i>&nbsp;Report</a></li>
+            <li><a href="../login.php"><i class="icon-user"></i>&nbsp; <font color="red"><b>Logout</a></font></b></font></li>
+
+         
+          
         </ul>
         </li>
         </ul>
@@ -202,7 +205,7 @@ code {
 <table width="100%" border="0">
   <tr>
     <td width="240" height="34" align="left"><img src="../images/helpdesk logo.png" width="300" height="72"></td>
-    <td width="753" align="center"><p><strong><img src="http://www.ufocool.com/images/flag/thailand.gif">&nbsp;&nbsp;Add your Priority</strong><strong>&nbsp;&nbsp;<img src="http://www.ufocool.com/images/flag/thailand.gif"></strong></p></td>
+    <td width="753" align="center"><p><strong>&nbsp;&nbsp;Add your Priority</strong><strong>&nbsp;&nbsp;</strong></p></td>
     <td width="329" align="center"><strong>
     <button type="button" class="btn btn-success"><i class="icon-calendar"></i>&nbsp;Date :: Time : <?php echo $date."&nbsp;/&nbsp;".$time;?></strong></button></td>
   </tr>

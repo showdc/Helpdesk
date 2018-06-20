@@ -31,6 +31,11 @@ function GetSQLValueString($theValue, $theType, $theDefinedValue = "", $theNotDe
 }
 }
 
+
+
+
+
+
 $currentPage = $_SERVER["PHP_SELF"];
 
 $maxRows_AJ = 10;
@@ -69,6 +74,71 @@ if (!empty($_SERVER['QUERY_STRING'])) {
   }
 }
 $queryString_AJ = sprintf("&totalRows_AJ=%d%s", $totalRows_AJ, $queryString_AJ);
+
+
+$currentPage = $_SERVER["PHP_SELF"];
+
+$maxRows_AND = 10;
+$pageNum_AND = 0;
+if (isset($_GET['pageNum_AND'])) {
+  $pageNum_AND = $_GET['pageNum_AND'];
+}
+$startRow_AND = $pageNum_AND * $maxRows_AND;
+
+mysql_select_db($database_IT, $IT);
+$query_AND = "SELECT * FROM addjob";
+$query_limit_AND = sprintf("%s LIMIT %d, %d", $query_AND, $startRow_AND, $maxRows_AND);
+$AND = mysql_query($query_limit_AND, $IT) or die(mysql_error());
+$row_AND = mysql_fetch_assoc($AND);
+
+if (isset($_GET['totalRows_AND'])) {
+  $totalRows_AND = $_GET['totalRows_AND'];
+} else {
+  $all_AND = mysql_query($query_AND);
+  $totalRows_AND = mysql_num_rows($all_AND);
+}
+$maxRows_AND = 10;
+$pageNum_AND = 0;
+if (isset($_GET['pageNum_AND'])) {
+  $pageNum_AND = $_GET['pageNum_AND'];
+}
+$startRow_AND = $pageNum_AND * $maxRows_AND;
+
+mysql_select_db($database_IT, $IT);
+$query_AND = "SELECT * FROM addjob ORDER BY id DESC";
+$query_limit_AND = sprintf("%s LIMIT %d, %d", $query_AND, $startRow_AND, $maxRows_AND);
+$AND = mysql_query($query_limit_AND, $IT) or die(mysql_error());
+$row_AND = mysql_fetch_assoc($AND);
+
+if (isset($_GET['totalRows_AND'])) {
+  $totalRows_AND = $_GET['totalRows_AND'];
+} else {
+  $all_AND = mysql_query($query_AND);
+  $totalRows_AND = mysql_num_rows($all_AND);
+}
+$totalPages_AND = ceil($totalRows_AND/$maxRows_AND)-1;
+
+$queryString_AND = "";
+if (!empty($_SERVER['QUERY_STRING'])) {
+  $params = explode("&", $_SERVER['QUERY_STRING']);
+  $newParams = array();
+  foreach ($params as $param) {
+    if (stristr($param, "pageNum_AND") == false && 
+        stristr($param, "totalRows_AND") == false) {
+      array_push($newParams, $param);
+    }
+  }
+  if (count($newParams) != 0) {
+    $queryString_AND = "&" . htmlentities(implode("&", $newParams));
+  }
+}
+$queryString_AND = sprintf("&totalRows_AND=%d%s", $totalRows_AND, $queryString_AND);
+?>
+
+
+
+
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -153,14 +223,19 @@ code {
       <div class="navbar-inner">
     <div class="container">
           <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-          <a class="brand" href="#">IT Helpdesk</a>
+         <a class="brand" href="#"><font color="#660033"> <b>IT Helpdesk</b></font></a>  
           <div class="nav-collapse collapse">
         <ul class="nav">
-              <li><a href="index.php"><i class="icon-home"></i>&nbsp;Home</a></li>
+
+              <li><a href="index.php"><i class="icon-home"></i>&nbsp; <font color="#ooooFF"><b>Home</a></b></font></li>
               <li><a href="addjob.php"><i class="icon-file"></i>&nbsp;Add Job</a></li>
-              <li><a href="mantenace.php"><i class="icon-wrench"></i>&nbsp;Maintennace</a></li>
-              <li><a href="inventory.php"><i class="icon-barcode"></i>&nbsp;Inventory</a></li>
-              <li><a href="ind.php"><i class="icon-user"></i>&nbsp;Administrator</a></li>
+            
+            
+              <li><a href="user_menu_report.php"><i class="icon-book"></i>&nbsp;Report</a></li> <!--  +Reportuser+ -->
+
+
+              <li><a href="indexlogin.php"><i class="icon-user"></i>&nbsp; <font color="red"><b>Logout</a></font></b></font></li>
+
             </ul>
         </li>
         </ul>
@@ -181,30 +256,43 @@ code {
 <table width="100%" border="0">
       <tr>
     <td width="300" height="109" align="left"><img src="images/helpdesk logo.png" width="300" height="72"></td>
-    <td width="678" align="center"><strong><img src="http://www.ufocool.com/images/flag/thailand.gif">&nbsp;&nbsp;Total tickets on system&nbsp;<?php echo $totalRows_AJ ?>&nbsp;  Tickets&nbsp;&nbsp;<img src="http://www.ufocool.com/images/flag/thailand.gif"></strong></td>
+    <td width="678" align="center">
+    &nbsp;<br><h5>Total tickets on system &nbsp; <?php echo $totalRows_AJ ?> &nbsp; Tickets</h5></br>&nbsp;&nbsp;</strong></td>
+
     <td width="361" align="center"><strong><button type="button" class="btn btn-success"><i class="icon-calendar"></i>&nbsp;Date :: Time : <?php echo $date."&nbsp;/&nbsp;".$time;?></strong></button></td>
   </tr>
 </table>
+
 <script src="js/bootstrap.min.js"></script>
-<table width="100%" border="0" class="table table-bordered">
+<table width="100%" border="0" class="table table-bordered"  >
   <tr class="btn-success">
     <td width="8%" align="center"><strong><i class="icon-user"></i>&nbsp;Name</strong></td>
     <td width="11%" align="center"><strong><i class="icon-calendar"></i>&nbsp;Date :: Time</strong></td>
     <td width="11%" align="center"><strong><i class="icon-home"></i>&nbsp;Department</strong></td>
-    <td width="39%" align="center"><strong><i class="icon-file"></i>&nbsp;Details</strong></td>
+    <td width="30%" align="center"><strong><i class="icon-file"></i>&nbsp;Details</strong></td>
     <td width="8%" align="center"><strong><i class="icon-time"></i>&nbsp;Status</strong></td>
-    <td width="23%" align="center"><strong><i class="icon-comment"></i>&nbsp;Commen</strong></td>
+    <td width="15%" align="center"><strong><i class="icon-comment"></i>&nbsp;Commen</strong></td>
+    <td colspan="10"><strong><i class="icon-cog"></i>&nbsp;Option</strong></td>
   </tr>
   <?php do { ?>
     <tr>
-      <td><?php echo $row_AJ['name']; ?></td>
+      <td><?php echo $row_AJ ['name']; ?></td>
       <td><?php echo $row_AJ['datepicker']; ?> <strong>/ </strong><?php echo $row_AJ['time']; ?></td>
       <td><?php echo $row_AJ['department']; ?></td>
       <td><a href="sendoutsite_report.php?id=<?php echo $row_AJ['id']; ?>"><?php echo $row_AJ['details']; ?></a></td>
       <td><?php echo $row_AJ['status']; ?></td>
       <td><?php echo $row_AJ['comment']; ?></td>
+
+       <td width="6%"><a href="editjob.php?id=<?php echo $row_AND['id']; ?>">
+        <button type="button" name="btnsubmit" class="btn btn-mini btn-success"><i class="icon-pencil"></i>&nbsp;Edit&nbsp;&nbsp;&nbsp;&nbsp;</button>
+      </a></td>
+
+     
+
     </tr>
-    <?php } while ($row_AJ = mysql_fetch_assoc($AJ)); ?>
+    <?php } while ($row_AJ = mysql_fetch_assoc($AJ));($row_AND = mysql_fetch_assoc($AND)); ?>
+
+   
 </table>
 <strong>&nbsp;&nbsp;<i class="icon-home"></i>&nbsp;ค้นหาข้อมูลเป็นแผนก</strong>
   </p>
@@ -218,15 +306,22 @@ code {
   <div class="span5" align="center">
   <table width="38%" height="46" border="0" align="center">
       <tr>
+      	
     <td height="42" align="center"><?php if ($pageNum_AJ > 0) { // Show if not first page ?>
             <a href="<?php printf("%s?pageNum_AJ=%d%s", $currentPage, 0, $queryString_AJ); ?>"><button type="button" class="btn btn-mini btn-success">&nbsp;&nbsp;<i class="icon-fast-backward"></i>&nbsp;&nbsp;</button></a>
         <?php } // Show if not first page ?></td>
+
+
     <td align="center"><?php if ($pageNum_AJ > 0) { // Show if not first page ?>
             <a href="<?php printf("%s?pageNum_AJ=%d%s", $currentPage, max(0, $pageNum_AJ - 1), $queryString_AJ); ?>"><button type="button" class="btn btn-mini btn-success">&nbsp;&nbsp;<i class="icon-backward"></i>&nbsp;&nbsp;</button></a>
         <?php } // Show if not first page ?></td>
+
+
     <td align="center"><?php if ($pageNum_AJ < $totalPages_AJ) { // Show if not last page ?>
             <a href="<?php printf("%s?pageNum_AJ=%d%s", $currentPage, min($totalPages_AJ, $pageNum_AJ + 1), $queryString_AJ); ?>"><button type="button" class="btn btn-mini btn-success">&nbsp;&nbsp;<i class=" icon-forward"></i>&nbsp;&nbsp;</button></a>
         <?php } // Show if not last page ?></td>
+
+
     <td align="center"><?php if ($pageNum_AJ < $totalPages_AJ) { // Show if not last page ?>
             <a href="<?php printf("%s?pageNum_AJ=%d%s", $currentPage, $totalPages_AJ, $queryString_AJ); ?>"><button type="button" class="btn btn-mini btn-success">&nbsp;&nbsp;<i class="icon-fast-forward"></i>&nbsp;&nbsp;</button></a>
         <?php } // Show if not last page ?></td>

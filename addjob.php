@@ -161,18 +161,35 @@ if(document.addjob.datepicker.value == "")
 	document.addjob.datepicker.focus(); 
 	return false; 
 }
+
+
 if(document.addjob.hardware_software.value == "")   
 { 
 	alert('กรุณากรอกปัญหาเกียวกับอะไรบอกด้วยครับ');       
 	document.addjob.hardware_software.focus(); 
 	return false; 
 }
+
+
+
+
+
 if(document.addjob.piority.value == "")   
 { 
 	alert('กรุณาระบุความเร่งด่วนสักนิดนึง!ครับ');       
 	document.addjob.piority.focus(); 
 	return false; 
 }
+
+
+
+
+
+
+
+
+
+
 if(document.addjob.department.value == "")   
 { 
 	alert('กรุณากรอกแผนกของท่านด้วยครับ');       
@@ -215,14 +232,19 @@ $(function() {
       <div class="navbar-inner">
     <div class="container">
           <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-          <a class="brand" href="#">IT Helpdesk</a>
+          <a class="brand" href="#"><font color="#660033"> <b>IT Helpdesk</b></font></a>  
           <div class="nav-collapse collapse">
         <ul class="nav">
-              <li><a href="index.php"><i class="icon-home"></i>&nbsp;Home</a></li>
+              <li><a href="index.php"><i class="icon-home"></i>&nbsp; <font color="#ooooFF"><b>Home</a></b></font></li>
               <li><a href="addjob.php"><i class="icon-file"></i>&nbsp;Add Job</a></li>
               <li><a href="mantenace.php"><i class="icon-wrench"></i>&nbsp;Maintennace</a></li>
               <li><a href="inventory.php"><i class="icon-barcode"></i>&nbsp;Inventory</a></li>
-              <li><a href="ind.php"><i class="icon-user"></i>&nbsp;Administrator</a></li>
+              
+             
+              
+                 <li><a href="indexlogin.php"><i class="icon-user"></i>&nbsp; <font color="red"><b>Logout</a></font></b></font></li>
+
+
             </ul>
         </li>
         </ul>
@@ -245,7 +267,7 @@ $(function() {
 <table width="100%" border="0">
       <tr>
     <td width="240" height="34" align="left"><img src="images/helpdesk logo.png" width="300" height="72"></td>
-    <td width="753" align="center"><strong><img src="http://www.ufocool.com/images/flag/thailand.gif">&nbsp;&nbsp; Add your job to system &nbsp;&nbsp;<img src="http://www.ufocool.com/images/flag/thailand.gif"></strong></td>
+    <td width="753" align="center"><strong>&nbsp;&nbsp; Add your job to system &nbsp;&nbsp;</strong></td>
     <td width="329" align="center"><strong><button type="button" class="btn btn-success"><i class="icon-calendar"></i>&nbsp;Date :: Time : <?php echo $date."&nbsp;/&nbsp;".$time;?></strong></button></td>
   </tr>
 </table>

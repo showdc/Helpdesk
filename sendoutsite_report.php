@@ -90,36 +90,50 @@ $totalRows_MAR = mysql_num_rows($MAR);
 	border-top-color: #333;
 }
 </style>
+
+
 </head>
 
 <body>
+
   <?
-  date_default_timezone_set("Asia/Bangkok");
+  date_default_timezone_set("Asia/Bangkok"); //cord date and time.. 
  
-    $date = date("d-m-Y");
-    $time = date("H:i");
+    $date = date("d-m-Y"); //cord date and time.. 
+    $time = date("H:i");   //cord date and time.. 
     ?>
+
 <div id="wrapall">
   <table width="100%" border="0">
     <tr>
-      <td width="25%" rowspan="4" align="center"><img src="images/rws_logo.png" width="162" height="111" /></td>
-      <td width="60%" align="center"><h2><strong>** ใบแจ้งงานซ่อม **</strong></h2></td>
-      <td width="15%" align="center">  <div class="data_line">
-    <input name="btnprint" id="btnprint" type="button" onClick="window.print()" value="Print" />
-  </div></td>
+      <td width="25%" rowspan="4" align="center"><img src="images/New Logo SDC.jpg" width="100" height="50" /></td>
+      <td width="60%" align="center"><h2><strong>Reques From</strong></h2></td>
+      <td width="15%" align="center">  
+
+    <input name="btnprint" id="btnprint" type="button" onClick="window.print()" value="Print" >
+
+ </td>
     </tr>
+
+
     <tr>
-      <td align="center">178 MOO 1, BOPHUT BEACH, KOH SAMUI</td>
+      <td align="center"> IT SUPPORT SHOWDC</td>
       <td>&nbsp;</td>
     </tr>
+
+
     <tr>
-      <td align="center">SURATTHANI 84320 THAILAND </td>
+      <td align="center"> </td>
       <td>&nbsp;</td>
     </tr>
+
+
     <tr>
-      <td height="24" align="center"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tel </strong>: +66 77 425 357 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Fax</strong> : +66 77 425 343</td>
+      <td height="24" align="center"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tel:0648025947 &nbsp;&nbsp;0648025903</strong> :</td>
       <td>&nbsp;</td>
     </tr>
+
+
   </table>
   <div class="data_line">&nbsp;&nbsp;<strong>Date/Time ::</strong> &nbsp;<?php echo $row_MAR['datepicker']; ?>:<?php echo $row_MAR['time']; ?>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Job ID ::</strong> IT-JOB00<?php echo $row_MAR['id']; ?></div>
   <div class="data_line">&nbsp;&nbsp;<strong>Username ::&nbsp;</strong><?php echo $row_MAR['name']; ?></div>
@@ -131,12 +145,15 @@ $totalRows_MAR = mysql_num_rows($MAR);
   <div class="data_line">&nbsp;</div>
   <div class="data_line">&nbsp;&nbsp;<strong>Status ::</strong>&nbsp;<?php echo $row_MAR['status']; ?></div>
   <div class="data_line">&nbsp;&nbsp;<strong>Comment ::</strong>&nbsp;<?php echo $row_MAR['comment']; ?></div>
-  <div class="data_line">&nbsp;&nbsp;
+  <div class="data_line">&nbsp;&nbsp;<strong>On site By ::_______________________________________(IT SUPPORT) </strong>&nbsp; 
+  <div class="data_line">&nbsp;&nbsp;</div>
+  
+
     <p>&nbsp;</p>
     <p>&nbsp;</p>
     <p>&nbsp;&nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp;.....................................&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...................................
 </p>
-    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>&nbsp;หัวหน้าแผนก			</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>แผนก IT</strong>&nbsp;&nbsp;&nbsp;</p>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>&nbsp;หัวหน้าแผนก			</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>หัวหน้าแผนก IT</strong>&nbsp;&nbsp;&nbsp;</p>
     <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Date/Time ::</strong> <? echo $date."&nbsp;/&nbsp;".$time?></p>
   </div>
 </div>
