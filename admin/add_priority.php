@@ -161,7 +161,7 @@ code {
 <link rel="stylesheet" href="css/jquery-ui.css">
 </head>
 
-<body background="images/1180422460.gif">
+<body background="images">
 
 <!-- Part 1: Wrap all page content here -->
 <div id="wrap">
@@ -171,15 +171,27 @@ code {
   <div class="navbar-inner">
     <div class="container">
       <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+
      <a class="brand" href="#"><font color="#660033"> <b>IT Helpdesk</b></font></a>  
       <div class="nav-collapse collapse">
         <ul class="nav">
-          <li><a href="index.php"><i class="icon-home"></i>&nbsp; <font color="#ooooFF"><b>Home</a></b></font></li>
-          <li><a href="adduser.php"><i class="icon-user"></i>&nbsp;Add_User</a></li>
-          <li><a href="add_department.php"><i class="icon-cog"></i>&nbsp;Add_Department</a></li>
-          <li><a href="add_priority.php"><i class="icon-cog"></i>&nbsp;Add_Priority</a></li>
-          <li><a href="add_problem.php"><i class="icon-cog"></i>&nbsp;Add_Problem</a></li>
-            <li><a href="../login.php"><i class="icon-user"></i>&nbsp; <font color="red"><b>Logout</a></font></b></font></li>
+
+
+
+ 		 <li><button name="button" class="btn btn-warning">
+          <a href="index.php"><i class="icon-home"></i><font color="#ooooFF"><b> &nbsp; Home&nbsp; &nbsp; </a></b></font></a></button></li>
+          <li><button name="button" class="btn btn-warning">
+          <a href="adduser.php"><i class="icon-user"></i><font color="#ooooFF"><b>&nbsp;Add_User</b>&nbsp; &nbsp;</a></font></button></li>
+          <li><button name="button" class="btn btn-warning">
+          <a href="add_department.php"><i class="icon-cog"></i><font color="#ooooFF">&nbsp;<b>Add_Department</b>&nbsp; &nbsp;</a></font></button></li>
+          <li><button name="button" class="btn btn-warning">
+          <a href="add_priority.php"><i class="icon-cog"></i><font color="#ooooFF">&nbsp;<b>Add_Priority</b>&nbsp; &nbsp;</a></font></button></li>
+          <li><button name="button" class="btn btn-warning">
+          <a href="add_problem.php"><i class="icon-cog"></i><font color="#ooooFF">&nbsp;<b>Add_Problem</b>&nbsp; &nbsp;</a></font></button></li>
+          <li><button name="button" class="btn btn-warning">  
+          <a href="menu_report.php"><i class="icon-book"></i><font color="#ooooFF">&nbsp;<b>Report</b></a></font></button></li>
+          <li><button name="button" class="btn btn-">
+          <a href="../indexlogin.php"><i class="icon-user"></i>&nbsp; <font color="red"><b>&nbsp;Logout&nbsp; &nbsp;</a></b></font></li>
 
          
           
@@ -205,17 +217,20 @@ code {
 <table width="100%" border="0">
   <tr>
     <td width="240" height="34" align="left"><img src="../images/helpdesk logo.png" width="300" height="72"></td>
-    <td width="753" align="center"><p><strong>&nbsp;&nbsp;Add your Priority</strong><strong>&nbsp;&nbsp;</strong></p></td>
-    <td width="329" align="center"><strong>
+    <td width="753" align="center"><p><strong><font color="#ooooFF"> &nbsp;&nbsp;<h3><b>Add your Priority</b></h3></strong>
+    	<strong>&nbsp;&nbsp;</strong></p></td>
+
+    <td width="329" align="center"></font><strong>
     <button type="button" class="btn btn-success"><i class="icon-calendar"></i>&nbsp;Date :: Time : <?php echo $date."&nbsp;/&nbsp;".$time;?></strong></button></td>
   </tr>
 </table>
+
 <hr/>
   <script src="js/bootstrap.min.js"></script></p>
 <form action="<?php echo $editFormAction; ?>" name="adduser" method="POST">
   <table width="315" border="0" align="center">
     <tr>
-      <td width="214"><strong><i class="icon-home"></i>&nbsp;Add Priority</strong></td>
+      <td width="214"><strong><i class="icon"><font color = "#ooooFF"></i><h5>&nbsp;Add Priority</h5></strong></font></td>
       <td width="166" align="center">&nbsp;</td>
     </tr>
     <tr>
@@ -225,6 +240,7 @@ code {
   </table>
   <input type="hidden" name="MM_insert" value="adduser">
 </form>
+
 <table width="80%" border="0" align="center">
   <tr>
     <td height="126">&nbsp;

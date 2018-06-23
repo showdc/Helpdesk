@@ -78,7 +78,7 @@ code {
 </head>
 
 
-<body background="images/1180422460.gif">     <!--blakkground -->
+<body background="images">     <!--blakkground -->
 
 
 
@@ -92,12 +92,15 @@ code {
       <div class="navbar-inner">
     <div class="container">
           <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-          <a class="brand" href="#"><font color="#660033"> <b>IT Helpdesk</b></font></a>  
+          <a class="brand" href="#"><font color="#660033"> <b>IT Services Helpdesk</b></font></a>  
           <div class="nav-collapse collapse">
+
+
         <ul class="nav">
             
-              
+              <li><button name="button" class="btn btn-warning"> <a href="form2mail.html"><i class="icon-user"></i>&nbsp;sent E-Mail to IT </a></button>&nbsp;</li>
             </ul>
+
         </li>
         </ul>
       </div>
@@ -123,7 +126,7 @@ code {
     <td width="240" height="34" align="left"><img src="images/helpdesk logo.png" width="300" height="72"></td>
 
     <td width="753" align="center"><p><strong><font color="#ooooFF">
-    	<b><H1>  Welcome  to  IT Helpdesk<H1></b></font></strong></p></td>
+    	<b><H1>  Welcome  to  IT  Services Helpdesk<H1></b></font></strong></p></td>
  
     <td width="329" align="center"><strong><button type="button" class="btn btn-success"><i class="icon-calendar"></i>&nbsp;Date :: Time : <?php echo $date."&nbsp;/&nbsp;".$time;?></strong></button></td>
   </tr>
@@ -141,30 +144,27 @@ code {
    <tr><td height="32" align="center">
 
   
- 						<p>&nbsp;</p>
-                        <p>&nbsp;</p>
-                        <p>&nbsp;</p>
-                        <p>&nbsp;</p>
+ 						
                         <p>&nbsp;</p>
                         <p>&nbsp;</p>
                         <p>&nbsp;</p>
  
 
-   	<table> <button  class="btn btn-success"><i class="icon-user"></i>
-   	 	<b><h4> <a href="login.php ">ADDMIN  </h4></b></a></button> </table>
+   	 <button  class="btn btn-warning"><i class="icon-user"></i>
+   	 	<b><h4> <a href="login.php ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ADMIN&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h4></b></a></button> 
 
+   	 	 <button  class="btn btn-info"><i class="icon-user"></i>
+        	 <h4><a href="userlogin.php">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;USER&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<h4></b></a></button> 
    	 		
 
-   	 		  <p>&nbsp;</p>
-              <p>&nbsp;</p>
-            <br>
+   	 		  
+            
 
 
-             <button  class="btn btn-success"><i class="icon-user"></i>
-        	 <h4><a href="userlogin.php">USER<h4></b></a></button> 
+            
  
 
-        	</br>
+        	
       
 
    </tr>

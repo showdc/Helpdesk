@@ -72,7 +72,7 @@ code {
 <link rel="stylesheet" href="css/jquery-ui.css">
 </head>
 
-<body background="images/1180422460.gif">
+<body background="images">
 <!-- Part 1: Wrap all page content here -->
 <div id="wrap">
 

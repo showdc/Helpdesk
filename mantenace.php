@@ -187,7 +187,7 @@ code {
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 </head>
 
-<body background="images/1180422460.gif">
+<body background="images">
 
 <!-- Part 1: Wrap all page content here -->
 <div id="wrap">
@@ -200,13 +200,30 @@ code {
          <a class="brand" href="#"><font color="#660033"> <b>IT Helpdesk</b></font></a>  
           <div class="nav-collapse collapse">
         <ul class="nav">
-               <li><a href="index.php"><i class="icon-home"></i>&nbsp; <font color="#ooooFF"><b>Home</a></b></font></li>
-              <li><a href="addjob.php"><i class="icon-file"></i>&nbsp;Add Job</a></li>
-              <li><a href="mantenace.php"><i class="icon-wrench"></i>&nbsp;Maintennace</a></li>
-              <li><a href="inventory.php"><i class="icon-barcode"></i>&nbsp;Inventory</a></li>
-              <li><a href="ind.php"><i class="icon-user"></i>&nbsp;Administrator</a></li>
 
-                 <li><a href="indexlogin.php"><i class="icon-user"></i>&nbsp; <font color="red"><b>Logout</a></font></b></font></li>
+            
+
+
+              <li> <button name="button" class="btn btn-warning">
+              	<a href="index.php"><i class="icon-home"></i>&nbsp; <font color="#ooooFF"><b>Home&nbsp;&nbsp;</a></b></font></button></li>
+
+              <li><button name="button" class="btn btn-warning">
+              	<a href="addjob.php"><i class="icon-file"></i>&nbsp;<font color="#ooooFF"><b>Add Job&nbsp;&nbsp;</b></a></font></button></li>
+
+              <li><button name="button" class="btn btn-warning">
+              	<a href="mantenace.php"><i class="icon-wrench"></i>&nbsp;<font color="#ooooFF"><b>Maintennace&nbsp;&nbsp;</b></a></font></button></li>
+
+              <li><button name="button" class="btn btn-warning">
+              	<a href="inventory.php"><i class="icon-barcode"></i>&nbsp;<font color="#ooooFF"><b>Inventory&nbsp;&nbsp;</b></a></font></button></li>
+              
+            
+				<li><button name="button" class="btn btn-warning">
+              	<a href="form2mail.html"><i class="icon-user"></i>&nbsp;<font color="#ooooFF"><b>sent E-mail to IT&nbsp;&nbsp;</b></a></font></button></li>
+
+             
+                <li><a href="indexlogin.php"><i class="icon-user"></i>&nbsp; <font color="red"><b>Logout&nbsp;&nbsp;</a></font></b></li>
+
+
 
               
             </ul>
@@ -220,42 +237,39 @@ code {
 <p>&nbsp;</p>
 <p><br/>
   <?
-  date_default_timezone_set("Asia/Bangkok");
+  date_default_timezone_set("Asia/Bangkok");  // date time
  
-    $date = date("d-m-Y");
-    $time = date("H:i");
+    $date = date("d-m-Y");   // date time
+    $time = date("H:i");     // date time
     ?>
   
 </p>
 <table width="100%" border="0">
       <tr>
     <td width="240" height="34" align="left"><img src="images/helpdesk logo.png" width="300" height="72"></td>
-    <td width="753" align="center"><p><strong>&nbsp;&nbsp;Welcome to Mantennace system</strong><strong>&nbsp;&nbsp;</strong></p></td>
-    <td width="329" align="center"><strong><button type="button" class="btn btn-success"><i class="icon-calendar"></i>&nbsp;Date :: Time : <?php echo $date."&nbsp;/&nbsp;".$time;?></strong></button></td>
-  </tr>
-    </table>    
+    <td width="753" align="center"><p><strong><font color ="ooooFF">&nbsp;&nbsp;<h3>Welcome to Mantennace system</h3></font></strong><strong>&nbsp;&nbsp;</strong></p></td>
+    <td width="329" align="center"><strong><button type="button" class="btn btn-success">
+    <i class="icon-calendar"></i><font color ="ooooFF">&nbsp;Date :: Time : <?php echo $date."&nbsp;/&nbsp;".$time;?></font></strong></button></td>
+      </tr>
+</table>    
  <hr/>
- <form ACTION="<?php echo $loginFormAction; ?>" name="login_ma" method="POST">
+
+<form ACTION="<?php echo $loginFormAction; ?>" name="login_ma" method="POST">
  <table width="20%" border="0" align="center">
-   <tr>
-     <td height="43" align="center" class="btn-success"><strong>Please Login</strong> !</td>
-   </tr>
-   <tr>
-     <td height="39" align="center"><strong><i class="icon-user"></i>&nbsp;Username</strong></td>
-   </tr>
-   <tr>
-     <td align="center"><input type="text" name="username" id="textfield"></td>
-   </tr>
-   <tr>
-     <td height="40" align="center"><strong><i class="icon-lock"></i>&nbsp;Password</strong></td>
-   </tr>
-   <tr>
-     <td align="center"><input type="password" name="password" id="textfield2"></td>
-   </tr>
-   <tr>
-     <td height="32" align="center"><button type="submit" name="button" id="button" class="btn btn-success"><i class="icon-check"></i>&nbsp;Login&nbsp;</button>
-      <button type="reset" name="button2" id="button2" class="btn btn-danger" ><i class="icon-remove"></i>&nbsp;Cancel</button></td>
-   </tr>
+       <tr><td height="43" align="center" class="btn-success"><strong>Please Login</strong> !</td></tr>
+       <tr><td height="39" align="center"><strong><i class="icon-user"></i><font color="ooooFF">&nbsp;Username</font></strong></td></tr>
+       <tr><td align="center"><input type="text" name="username" id="textfield"></td></tr>
+       <tr><td height="40" align="center"><strong><i class="icon-lock"></i><font color = "ooooFF">&nbsp;Password</font></strong></td></tr>
+       <tr><td align="center"><input type="password" name="password" id="textfield2"></td></tr>
+
+        <tr>
+   	     <td height="32" align="center">
+   		<button type="submit" name="button" id="button" class="btn btn-success">
+   		<i class="icon-check"></i>&nbsp;Login&nbsp;</button>
+        <button type="reset" name="button2" id="button2" class="btn btn-danger" >
+        <i class="icon-remove"></i>&nbsp;Cancel</button></td>
+       </tr>
+
  </table>
 </form>
 <!-- Le javascript

@@ -135,7 +135,7 @@ code {
 
 <!-- Part 1: Wrap all page content here -->
 <tml lang="en">
-<body background="images/1180422460.gif">
+<body background="images">
 <p>&nbsp;</p>
 <div id="wrap">
 

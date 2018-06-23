@@ -39,7 +39,7 @@ if (isset($_POST['username'])) {
   $MM_fldUserAuthorization = "";
 
   $MM_redirectLoginSuccess = "admin/index.php";
-  $MM_redirectLoginFailed = "Login.php";
+  $MM_redirectLoginFailed = "indexlogin.php";
 
 
   $MM_redirecttoReferrer = false;
@@ -153,7 +153,7 @@ code {
 </head>
 
 
-<body background="images/1180422460.gif">     <!--blakkground -->
+<body background="images">     <!--blakkground -->
 
 
 
@@ -170,7 +170,9 @@ code {
           <a class="brand" href="#"><font color="#660033"> <b>IT Helpdesk</b></font></a>  
           <div class="nav-collapse collapse">
         <ul class="nav">
-             <li><a href="indexLogin.php"><i class="icon-home"></i>&nbsp; <font color="#ooooFF"><b>Home</a></b></font></li>
+             <li><button name="button" class="btn btn-warning">  <a href="indexlogin.php"><i class="icon-home"></i>&nbsp; <font color="#ooooFF"><b>Home</a></b></font></button></li>
+
+             <li><button name="button" class="btn btn-warning">  <a href="form2mail.html"><i class="icon-home"></i>&nbsp; <font color="#ooooFF"><b>Sent E-mail to IT </a></b></font></button></li>
               
               
             </ul>

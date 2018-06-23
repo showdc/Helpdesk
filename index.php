@@ -213,7 +213,7 @@ code {
 
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 
-<body background="images/1180422460.gif">
+<body background="images">
 
 <!-- Part 1: Wrap all page content here -->
 <div id="wrap">
@@ -223,18 +223,26 @@ code {
       <div class="navbar-inner">
     <div class="container">
           <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-         <a class="brand" href="#"><font color="#660033"> <b>IT Helpdesk</b></font></a>  
+         <a class="brand" href="#"><font color="#660033"> <b> IT  Services Helpdesk</b></font></a>  
           <div class="nav-collapse collapse">
         <ul class="nav">
 
-              <li><a href="index.php"><i class="icon-home"></i>&nbsp; <font color="#ooooFF"><b>Home</a></b></font></li>
-              <li><a href="addjob.php"><i class="icon-file"></i>&nbsp;Add Job</a></li>
-            
-            
-              <li><a href="user_menu_report.php"><i class="icon-book"></i>&nbsp;Report</a></li> <!--  +Reportuser+ -->
+              <li><button name="button" class="btn btn-warning">
+              	<a href="index.php"><i class="icon-home"></i><font color="#ooooFF"><b>Home&nbsp;&nbsp;&nbsp;&nbsp;</a></b></font></button></li>
 
+              <li><button name="button" class="btn btn-warning">
+              	<a href="addjob.php"><i class="icon-file"></i><font color="#ooooFF"><b>&nbsp;&nbsp;Add Job&nbsp;&nbsp;&nbsp;&nbsp;</b></a></font></button></li>            
+            
+              <li><button name="button" class="btn btn-warning">
+              	<a href="user_menu_report.php"><i class="icon-book"></i><font color="#ooooFF"><b>&nbsp;&nbsp;Report&nbsp;&nbsp;&nbsp;&nbsp;</b></a></font></button></li> 
+              	<!--  +Reportuser+ -->
+				<li><button name="button" class="btn btn-warning">
+              	<a href="form2mail.html"><i class="icon-user"></i>&nbsp;<font color="#ooooFF"><b>sent E-mail to IT&nbsp;&nbsp;</b></a></font></button></li>
 
-              <li><a href="indexlogin.php"><i class="icon-user"></i>&nbsp; <font color="red"><b>Logout</a></font></b></font></li>
+		  
+          <li><button name="button" class="btn btn-">
+          <a href="indexlogin.php"><i class="icon-user"></i>&nbsp; <font color="red"><b>&nbsp;Logout&nbsp;&nbsp;&nbsp; &nbsp;</a></b></font></li>
+
 
             </ul>
         </li>
@@ -256,8 +264,10 @@ code {
 <table width="100%" border="0">
       <tr>
     <td width="300" height="109" align="left"><img src="images/helpdesk logo.png" width="300" height="72"></td>
+
     <td width="678" align="center">
-    &nbsp;<br><h5>Total tickets on system &nbsp; <?php echo $totalRows_AJ ?> &nbsp; Tickets</h5></br>&nbsp;&nbsp;</strong></td>
+    &nbsp;<br><button name="button" class="btn btn-">  <font color="#ooooFF"><h4>&nbsp; &nbsp; &nbsp; Total tickets on system &nbsp; <?php echo $totalRows_AJ ?> &nbsp; Tickets&nbsp; &nbsp; &nbsp; </h4></font></button></br>&nbsp;&nbsp;</strong></td>
+
 
     <td width="361" align="center"><strong><button type="button" class="btn btn-success"><i class="icon-calendar"></i>&nbsp;Date :: Time : <?php echo $date."&nbsp;/&nbsp;".$time;?></strong></button></td>
   </tr>

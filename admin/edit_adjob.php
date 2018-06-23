@@ -167,7 +167,7 @@ $(function() {
 </script>
 </head>
 
-<body background="images/1180422460.gif">
+<body background="images">
 
 <!-- Part 1: Wrap all page content here -->
 <div id="wrap">
@@ -177,7 +177,7 @@ $(function() {
   <div class="navbar-inner">
     <div class="container">
       <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-      <a class="brand" href="#">IT Helpdesk :: Edit your job</a>
+      <a class="brand" href="#"><font color ="#ooooFF"><h4>IT  Services Helpdesk:: Edit your job</h4></font></a>
       <div class="nav-collapse collapse">
         </li>
         </ul>
@@ -189,18 +189,18 @@ $(function() {
 <p></p>
   <br>
   <?
- date_default_timezone_set("Asia/Bangkok");
+ date_default_timezone_set("Asia/Bangkok"); //date time 
     $date = date("d-m-Y");
     $time = date("H:i");
     ?>
 </p>
-<br>
+<br>5
 <table width="100%" border="0">
   <tr>
     <td width="240" height="34" align="left"><img src="../images/helpdesk logo.png" width="300" height="72"></td>
-    <td width="753" align="center"><p><strong><img src="http://www.ufocool.com/images/flag/thailand.gif">&nbsp;&nbsp;Edit your job</strong><strong>&nbsp;&nbsp;<img src="http://www.ufocool.com/images/flag/thailand.gif"></strong></p></td>
+    <td width="753" align="center"><p><strong><font color="#ooooFF">&nbsp;&nbsp;<h3>Edit your </h3></font></strong><strong>&nbsp;&nbsp;</strong></p></td>
     <td width="329" align="center"><strong>
-    <button type="button" class="btn btn-success"><i class="icon-calendar"></i>&nbsp;Date :: Time : <?php echo $date."&nbsp;/&nbsp;".$time;?></strong></button></td>
+    <button type="button" class="btn btn-success"><i class="icon-calendar"></i><font color="#ooooFF">&nbsp;Date :: Time : <?php echo $date."&nbsp;/&nbsp;".$time;?></font></strong></button></td>
   </tr>
 </table>
 <script src="assets/js/bootstrap-transition.js"></script> 
@@ -220,31 +220,31 @@ $(function() {
 <form method="post" name="form1" action="<?php echo $editFormAction; ?>">
   <table align="center">
     <tr valign="baseline">
-      <td height="24" align="left" nowrap><strong><i class="icon-user"></i>&nbsp;Name</strong></td>
-      <td><strong><i class="icon-flag"></i>&nbsp;Piority</strong></td>
+      <td height="24" align="left" nowrap><strong><i class="icon-user"></i><font color="#ooooFF">&nbsp;Name</font></strong></td>
+      <td><strong><i class="icon-flag"></i><font color="#ooooFF">&nbsp;Piority</font></strong></td>
     </tr>
     <tr valign="baseline">
       <td nowrap align="left"><input type="text" name="name" value="<?php echo htmlentities($row_EAD['name'], ENT_COMPAT, 'utf-8'); ?>" size="32"></td>
       <td><input type="text" name="piority" value="<?php echo htmlentities($row_EAD['piority'], ENT_COMPAT, 'utf-8'); ?>" size="32"></td>
     </tr>
     <tr valign="baseline">
-      <td height="22" align="left" nowrap><strong><i class="icon-calendar"></i>&nbsp;Date </strong></td>
-      <td><strong><i class="icon-wrench"></i>&nbsp;Problem</strong></td>
+      <td height="22" align="left" nowrap><strong><i class="icon-calendar"></i><font color="#ooooFF">&nbsp;Date </font></strong></td>
+      <td><strong><i class="icon-wrench"></i><font color="#ooooFF">&nbsp;Problem</font></strong></td>
     </tr>
     <tr valign="baseline">
       <td nowrap align="left"><input type="text" name="datepicker" id="datepicker" value="<?php echo htmlentities($row_EAD['datepicker'], ENT_COMPAT, 'utf-8'); ?>" size="32"></td>
       <td><input type="text" name="problem" value="<?php echo htmlentities($row_EAD['problem'], ENT_COMPAT, 'utf-8'); ?>" size="32"></td>
     </tr>
     <tr valign="baseline">
-      <td height="22" align="left" nowrap><strong><i class="icon-time"></i>&nbsp;Time</strong></td>
-      <td><strong><i class="icon-file"></i>&nbsp;Subject</strong></td>
+      <td height="22" align="left" nowrap><strong><i class="icon-time"></i><font color="#ooooFF">&nbsp;Time</font></strong></td>
+      <td><strong><i class="icon-file"></i><font color="#ooooFF">&nbsp;Subject</strong></font></strong></td>
     </tr>
     <tr valign="baseline">
       <td nowrap align="left"><input type="text" name="time" value="<?php echo htmlentities($row_EAD['time'], ENT_COMPAT, 'utf-8'); ?>" size="32"></td>
       <td><input type="text" name="subject" value="<?php echo htmlentities($row_EAD['subject'], ENT_COMPAT, 'utf-8'); ?>" size="32"></td>
     </tr>
     <tr valign="baseline">
-      <td height="22" align="left" nowrap><strong><i class="icon-home"></i>&nbsp;Department</strong></td>
+      <td height="22" align="left" nowrap><strong><i class="icon-home"></i><font color="#ooooFF">&nbsp;Department</font></strong></td>
       <td>&nbsp;</td>
     </tr>
     <tr valign="baseline">
@@ -252,7 +252,7 @@ $(function() {
       <td>&nbsp;</td>
     </tr>
     <tr valign="baseline">
-      <td height="22" align="left" nowrap><strong><i class="icon-book"></i>&nbsp;Details</strong></td>
+      <td height="22" align="left" nowrap><strong><i class="icon-book"></i><font color="#ooooFF">&nbsp;Details</font></strong></td>
       <td>&nbsp;</td>
     </tr>
     <tr valign="baseline">
@@ -263,14 +263,14 @@ $(function() {
       <td>&nbsp;</td>
     </tr>
     <tr valign="baseline">
-      <td height="22" align="left" nowrap><strong><i class="icon-comment"></i>&nbsp;Comment</strong></td>
+      <td height="22" align="left" nowrap><strong><i class="icon-comment"></i><font color="#ooooFF">&nbsp;Comment</font></strong></td>
       <td>&nbsp;</td>
     </tr>
     <tr valign="baseline">
       <td colspan="2" align="left" nowrap><input type="text" name="comment" class="mana" value="<?php echo htmlentities($row_EAD['comment'], ENT_COMPAT, 'utf-8'); ?>" size="32"></td>
     </tr>
     <tr valign="baseline">
-      <td height="22" align="left" nowrap><strong><i class="icon-time"></i>&nbsp;Status</strong></td>
+      <td height="22" align="left" nowrap><strong><i class="icon-time"></i><font color="#ooooFf">&nbsp;Status</font></strong></td>
       <td>&nbsp;</td>
     </tr>
     <tr valign="baseline">

@@ -98,7 +98,7 @@ function MM_swapImage() { //v3.0
 </script>
 </head>
 
-<body background="images/1180422460.gif" onload="MM_preloadImages('../icon/Back1.png')">
+<body background="images" onload="MM_preloadImages('../icon/Back1.png')">
 <table width="100%" border="0">
   <tr>
     <td class="btn-success">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="icon/Tools.png" width="32" height="32" /> &nbsp;<strong>แผนงานการซ่อมบำรุงประจำปี ( Peace Mantenace year plan)</strong></td>

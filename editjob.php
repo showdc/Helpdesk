@@ -75,7 +75,7 @@ $totalRows_EAD = mysql_num_rows($EAD);
 <tml lang="en">
 <head>
 <meta charset="utf-8">
-<title>Edit your job</title>
+<title><font color="ooooFF"><h3>Edit your job</h3></font></title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="">
 <meta name="author" content="">
@@ -167,7 +167,7 @@ $(function() {
 </script>
 </head>
 
-<body background="images/1180422460.gif">
+<body background="images">
 
 <!-- Part 1: Wrap all page content here -->
 <div id="wrap">
@@ -177,8 +177,8 @@ $(function() {
   <div class="navbar-inner">
     <div class="container">
       <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-      <a class="brand" href="#">IT Helpdesk :: Edit your job</a>
-      <div class="nav-collapse collapse">
+      <a class="brand" href="#"><font color ="#ooooFF"></h3><b>IT  Services Helpdesk :: Edit your job</b></font></h3></a>
+      <div class="nav-collapse collapse">/
         </li>
         </ul>
       </div>
@@ -198,11 +198,13 @@ $(function() {
 <table width="100%" border="0">
   <tr>
     <td width="240" height="34" align="left"><img src="images/helpdesk logo.png" width="300" height="72"></td>
-    <td width="753" align="center"><p><strong>&nbsp;&nbsp;Edit your job</strong><strong>&nbsp;&nbsp;</strong></p></td>
+    <td width="753" align="center"><p><strong><font color="#ooooFF">&nbsp;&nbsp;<h3><b>Edit your job</b></h3></strong></font><strong>&nbsp;&nbsp;</strong></p></td>
     <td width="329" align="center"><strong>
     <button type="button" class="btn btn-success"><i class="icon-calendar"></i>&nbsp;Date :: Time : <?php echo $date."&nbsp;/&nbsp;".$time;?></strong></button></td>
   </tr>
 </table>
+
+
 <script src="assets/js/bootstrap-transition.js"></script> 
   <script src="assets/js/bootstrap-alert.js"></script> 
   <script src="assets/js/bootstrap-modal.js"></script> 
@@ -217,34 +219,36 @@ $(function() {
   <script src="assets/js/bootstrap-typeahead.js"></script> 
   <script src="js/bootstrap.min.js"></script>
 </p>
+
 <form method="post" name="form1" action="<?php echo $editFormAction; ?>">
   <table align="center">
+  	
     <tr valign="baseline">
-      <td height="24" align="left" nowrap><strong><i class="icon-user"></i>&nbsp;Name</strong></td>
-      <td><strong><i class="icon-flag"></i>&nbsp;Piority</strong></td>
+      <td height="24" align="left" nowrap><strong><i class="icon-user"></i><font color="#ooooFF">&nbsp;Name</font></strong></td>
+      <td><strong><i class="icon-flag"></i><font color="#ooooFF">&nbsp;Piority</font></strong></td>
     </tr>
     <tr valign="baseline">
       <td nowrap align="left"><input type="text" name="name" value="<?php echo htmlentities($row_EAD['name'], ENT_COMPAT, 'utf-8'); ?>" size="32"></td>
       <td><input type="text" name="piority" value="<?php echo htmlentities($row_EAD['piority'], ENT_COMPAT, 'utf-8'); ?>" size="32"></td>
     </tr>
     <tr valign="baseline">
-      <td height="22" align="left" nowrap><strong><i class="icon-calendar"></i>&nbsp;Date </strong></td>
-      <td><strong><i class="icon-wrench"></i>&nbsp;Problem</strong></td>
+      <td height="22" align="left" nowrap><strong><i class="icon-calendar"></i><font color="#ooooFF">&nbsp;Date </font></strong></td>
+      <td><strong><i class="icon-wrench"></i><font color="#ooooFF">&nbsp;Problem</font></strong></td>
     </tr>
     <tr valign="baseline">
       <td nowrap align="left"><input type="text" name="datepicker" id="datepicker" value="<?php echo htmlentities($row_EAD['datepicker'], ENT_COMPAT, 'utf-8'); ?>" size="32"></td>
       <td><input type="text" name="problem" value="<?php echo htmlentities($row_EAD['problem'], ENT_COMPAT, 'utf-8'); ?>" size="32"></td>
     </tr>
     <tr valign="baseline">
-      <td height="22" align="left" nowrap><strong><i class="icon-time"></i>&nbsp;Time</strong></td>
-      <td><strong><i class="icon-file"></i>&nbsp;Subject</strong></td>
+      <td height="22" align="left" nowrap><strong><i class="icon-time"></i><font color="#ooooFF">&nbsp;Time</font></strong></td>
+      <td><strong><i class="icon-file"></i><font color="#ooooFF">&nbsp;Subject</font></strong></td>
     </tr>
     <tr valign="baseline">
       <td nowrap align="left"><input type="text" name="time" value="<?php echo htmlentities($row_EAD['time'], ENT_COMPAT, 'utf-8'); ?>" size="32"></td>
       <td><input type="text" name="subject" value="<?php echo htmlentities($row_EAD['subject'], ENT_COMPAT, 'utf-8'); ?>" size="32"></td>
     </tr>
     <tr valign="baseline">
-      <td height="22" align="left" nowrap><strong><i class="icon-home"></i>&nbsp;Department</strong></td>
+      <td height="22" align="left" nowrap><strong><i class="icon-home"></i><font color="#ooooFF">&nbsp;Department</font></strong></td>
       <td>&nbsp;</td>
     </tr>
     <tr valign="baseline">
@@ -252,7 +256,7 @@ $(function() {
       <td>&nbsp;</td>
     </tr>
     <tr valign="baseline">
-      <td height="22" align="left" nowrap><strong><i class="icon-book"></i>&nbsp;Details</strong></td>
+      <td height="22" align="left" nowrap><strong><i class="icon-book"></i><font color="#ooooFF">&nbsp;Details</font></strong></td>
       <td>&nbsp;</td>
     </tr>
     <tr valign="baseline">
@@ -263,14 +267,14 @@ $(function() {
       <td>&nbsp;</td>
     </tr>
     <tr valign="baseline">
-      <td height="22" align="left" nowrap><strong><i class="icon-comment"></i>&nbsp;Comment</strong></td>
+      <td height="22" align="left" nowrap><strong><i class="icon-comment"></i><font color="#ooooFF">&nbsp;Comment</font></strong></td>
       <td>&nbsp;</td>
     </tr>
     <tr valign="baseline">
       <td colspan="2" align="left" nowrap><input type="text" name="comment" class="mana" value="<?php echo htmlentities($row_EAD['comment'], ENT_COMPAT, 'utf-8'); ?>" size="32"></td>
     </tr>
     <tr valign="baseline">
-      <td height="22" align="left" nowrap><strong><i class="icon-time"></i>&nbsp;Status</strong></td>
+      <td height="22" align="left" nowrap><strong><i class="icon-time"></i> <font color="#ooooFF">&nbsp;Status</font></strong></td>
       <td>&nbsp;</td>
     </tr>
     <tr valign="baseline">
@@ -285,10 +289,13 @@ $(function() {
       </a>
       </td>
     </tr>
+
   </table>
   <input type="hidden" name="MM_update" value="form1">
   <input type="hidden" name="id" value="<?php echo $row_EAD['id']; ?>">
+
 </form>
+
 </body>
 </html><?php
 mysql_free_result($EAD);

@@ -72,7 +72,7 @@ code {
 <link rel="stylesheet" href="css/jquery-ui.css">
 </head>
 
-<body background="images/1180422460.gif">
+<body background="images">
 
 <!-- Part 1: Wrap all page content here -->
 <div id="wrap">
@@ -85,7 +85,13 @@ code {
    <a class="brand" href="#"><font color="#660033"> <b>IT Helpdesk</b></font></a>  
       <div class="nav-collapse collapse">
         <ul class="nav">
-          <li><a href="index.php"><i class="icon-home"></i>&nbsp; <font color="#ooooFF"><b>Home</a></b></font></li>
+
+
+            <li> <button name="button" class="btn btn-warning">
+              	<a href="index.php"><i class="icon-home"></i>&nbsp; <font color="#ooooFF"><b>Home&nbsp;&nbsp;</a></b></font></button></li>
+
+
+          <li><button name="button" class="btn btn-warning"> <a href="form2mail.html"><i class="icon-user"></i><b><font color="ooooFF">&nbsp;sent E-Mail to IT </b></font></a></button>&nbsp;</li>
          
           
 
@@ -115,8 +121,8 @@ code {
 <p>
 <table width="100%" border="0">
   <tr>
-    <td width="240" height="34" align="left"><img src="../images/helpdesk logo.png" width="300" height="72"></td>
-    <td width="753" align="center"><p><strong>&nbsp;&nbsp;Report System</strong><strong>&nbsp;&nbsp;</strong></p></td>
+    <td width="240" height="34" align="left"><img src="images/helpdesk logo.png" width="300" height="72"></td>
+    <td width="753" align="center"><p><strong><font color="#ooooFF"><h3>&nbsp;&nbsp;Report System</h3></font></strong><strong>&nbsp;&nbsp;</strong></p></td>
     <td width="329" align="center"><strong>
     <button type="button" class="btn btn-success"><i class="icon-calendar"></i>&nbsp;Date :: Time : <?php echo $date."&nbsp;/&nbsp;".$time;?></strong></button></td>
   </tr>
@@ -127,19 +133,22 @@ code {
     <td width="50" align="center">&nbsp;</td>
   </tr>
   <tr>
-    <td><strong><a href="admin/rep.php"><i class="icon-book"></i>&nbsp;By Summary Report</a></strong></td>
+    <td><button name="button" class="btn btn-">
+    	<strong><a href="admin/rep.php"><i class="icon-book"><font color ="ooooFF"></i>&nbsp;By Summary Report&nbsp;&nbsp;</a></font></strong></button></td>
   </tr>
   <tr>
     <td align="center">&nbsp;</td>
   </tr>
   <tr>
-    <td><strong><a href="admin/report.php"><i class="icon-calendar"></i>&nbsp;By Date : Time</a></strong></a></td>
+    <td><button name="button" class="btn btn-">
+    	<strong><a href="admin/report.php"><i class="icon-calendar"></i><font color ="ooooFF">&nbsp;By Date : Time&nbsp;&nbsp;&nbsp;</a></font></strong></a></button></td>
   </tr>
   <tr>
     <td align="center">&nbsp;</td>
   </tr>
   <tr>
-    <td><a href="admin/search_department.php"><strong><i class="icon-home"></i>&nbsp;By Department</strong></a></td>
+    <td><button name="button" class="btn btn-">
+    	<a href="admin/search_department.php"><strong><i class="icon-home"><font color="ooooFF"></i>&nbsp;By Department&nbsp;&nbsp;&nbsp;</font></strong></a></button></td>
   </tr>
   <tr>
     <td>&nbsp;</td>

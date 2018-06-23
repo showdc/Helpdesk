@@ -148,7 +148,7 @@ code {
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 </head>
 
-<body background="images/1180422460.gif">
+<body background="images">
 
 <!-- Part 1: Wrap all page content here -->
 <div id="wrap">

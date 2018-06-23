@@ -136,7 +136,7 @@ code {
 
 <!-- Part 1: Wrap all page content here -->
 <tml lang="en">
-<body background="images/1180422460.gif"><div id="wrap">
+<body background="images"><div id="wrap">
 
 <!-- Fixed navbar -->
 <div class="navbar navbar-fixed-top">

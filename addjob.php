@@ -151,7 +151,7 @@ function fncSubmit()
 {    
 if(document.addjob.name.value == "")   
 { 
-	alert('กรุณากรอกชื่อเสียงเรียงนามด้วยครับ');       
+	alert('กรุณากรอกชื่อ');       
 	document.addjob.name.focus(); 
 	return false; 
 }
@@ -222,7 +222,8 @@ $(function() {
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 </head>
 
-<body background="images/1180422460.gif">
+<body background="images">
+
 
 <!-- Part 1: Wrap all page content here -->
 <div id="wrap">
@@ -232,17 +233,22 @@ $(function() {
       <div class="navbar-inner">
     <div class="container">
           <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-          <a class="brand" href="#"><font color="#660033"> <b>IT Helpdesk</b></font></a>  
+          <a class="brand" href="#"><font color="#660033"> <b>IT  Services Helpdesk</b></font></a>  
           <div class="nav-collapse collapse">
         <ul class="nav">
-              <li><a href="index.php"><i class="icon-home"></i>&nbsp; <font color="#ooooFF"><b>Home</a></b></font></li>
-              <li><a href="addjob.php"><i class="icon-file"></i>&nbsp;Add Job</a></li>
-              <li><a href="mantenace.php"><i class="icon-wrench"></i>&nbsp;Maintennace</a></li>
-              <li><a href="inventory.php"><i class="icon-barcode"></i>&nbsp;Inventory</a></li>
-              
+
+              <li> <button name="button" class="btn btn-warning">
+              	<a href="index.php"><i class="icon-home"></i>&nbsp; <font color="#ooooFF"><b>Home&nbsp;&nbsp;</a></b></font></button></li>
+
+              <li><button name="button" class="btn btn-warning">
+              	<a href="addjob.php"><i class="icon-file"></i>&nbsp;<font color="#ooooFF"><b>Add Job&nbsp;&nbsp;</b></a></font></button></li>
+
+            
+				<li><button name="button" class="btn btn-warning">
+              	<a href="form2mail.html"><i class="icon-user"></i>&nbsp;<font color="#ooooFF"><b>sent E-mail to IT&nbsp;&nbsp;</b></a></font></button></li>
+
              
-              
-                 <li><a href="indexlogin.php"><i class="icon-user"></i>&nbsp; <font color="red"><b>Logout</a></font></b></font></li>
+                <li><a href="indexlogin.php"><i class="icon-user"></i>&nbsp; <font color="red"><b>Logout&nbsp;&nbsp;</a></font></b></li>
 
 
             </ul>
@@ -267,16 +273,21 @@ $(function() {
 <table width="100%" border="0">
       <tr>
     <td width="240" height="34" align="left"><img src="images/helpdesk logo.png" width="300" height="72"></td>
-    <td width="753" align="center"><strong>&nbsp;&nbsp; Add your job to system &nbsp;&nbsp;</strong></td>
+
+    <td width="753" align="center"><strong><font color ="#ooooFF">&nbsp;&nbsp; <h3>Add your job to system </h3>&nbsp;&nbsp;</font></strong></td>
     <td width="329" align="center"><strong><button type="button" class="btn btn-success"><i class="icon-calendar"></i>&nbsp;Date :: Time : <?php echo $date."&nbsp;/&nbsp;".$time;?></strong></button></td>
+
+     
   </tr>
+
 </table>
+<li> <button name="button" class="btn btn-warning"> &nbsp; 0648025947 &nbsp;&nbsp; 0648025903 &nbsp;&nbsp;</button>&nbsp;</li>
     <hr/>
 <form action="<?php echo $editFormAction; ?>" name="addjob" method="POST" onSubmit="JavaScript:return fncSubmit();">
   <table width="30%" border="0" align="center">
   <tr>
-    <td height="40"><strong><i class="icon-user"></i>&nbsp;Username</strong></td>
-    <td><strong><i class="icon-flag"></i>&nbsp;Priority</strong></td>
+    <td height="40"><strong><i class="icon-user"></i><font color ="ooooFF">&nbsp;Username</font></strong></td>
+    <td><strong><i class="icon-flag"></i><font color ="ooooFF">&nbsp;Priority</font></strong></td>
   </tr>
   <tr>
     <td width="21%" height="40"><input name="name" type="text" class="form-control" /></td>
@@ -296,8 +307,8 @@ do {
     </select></td>
     </tr>
   <tr>
-    <td height="46"><strong><i class="icon-calendar"></i>&nbsp;Date</strong></td>
-    <td><strong><i class="icon-wrench"></i>&nbsp;Problem</strong></td>
+    <td height="46"><strong><i class="icon-calendar"></i><font color ="#ooooFF">&nbsp;Date</font></strong></td>
+    <td><strong><i class="icon-wrench"><font color ="ooooFF"></i>&nbsp;Problem</font></strong></td>
     </tr>
   <tr>
     <td height="42"><input type="text" name="datepicker" id="datepicker" class="form-control" /></td>
@@ -317,15 +328,15 @@ do {
     </select></td>
     </tr>
   <tr>
-    <td height="47"><strong><i class="icon-time"></i>&nbsp;Time</strong></td>
-    <td><strong><i class="icon-file"></i>&nbsp;Subject</strong></td>
+    <td height="47"><strong><i class="icon-time"><font color ="ooooFF"></i>&nbsp;Time</font></strong></td>
+    <td><strong><i class="icon-file"></i><font color = "#ooooFF">&nbsp;Subject</font></strong></td>
     </tr>
   <tr>
     <td height="41"><input type="text" name="time" value="<? echo $time?>"></td>
     <td><input type="text" name="subject" id="textfield"></td>
     </tr>
   <tr>
-    <td height="33"><strong><i class="icon-home"></i>&nbsp;Department </strong></td>
+    <td height="33"><strong><i class="icon-home"></i><font color= "ooooFF">&nbsp;Department</font> </strong></td>
     <td>&nbsp;</td>
   </tr>
   <tr>
@@ -343,23 +354,48 @@ do {
   }
 ?>
     </select></td>
-    <td align="center">      <button name="button" type="submit" id="button" class="btn btn-success"><i class="icon-check"></i>&nbsp;Save&nbsp;&nbsp;</button>
-      <button name="button2" type="reset" id="button2" class="btn btn-danger"><i class="icon-trash"></i>&nbsp;Cancel&nbsp;</button></td>
+        
+
+    
     </tr>
+
   <tr>
-    <td height="34"><strong><i class="icon-comment"></i>&nbsp;Discription</strong></td>
+    <td height="34"><strong><i class="icon-comment"></i><font color ="ooooFF">&nbsp;Discriptio </font></strong></td>
     <td>&nbsp;</td>
     </tr>
+
+
   <tr>
     <td colspan="2"><textarea name="details" rows="3" class="mana"></textarea>&nbsp;</td>
     </tr>
+
   <tr>
     <td colspan="2">
 </td>
+
+
     </tr>
+     <td align="center">      
+
+      <button name="button" type="submit" id="button" class="btn btn-success"><i class="icon-check"></i>&nbsp;Save&nbsp;&nbsp;</button>
+      <button name="button2" type="reset" id="button2" class="btn btn-danger"><i class="icon-trash"></i>&nbsp;Cancel&nbsp;</button></td>
+
 </table>
+
   <input type="hidden" name="MM_insert" value="addjob">
+
+
+
+
+
+
 </form>
+
+
+
+
+
+
 <p>&nbsp;</p>
 <br>
 

@@ -62,7 +62,7 @@ if ((isset($_GET['id'])) && ($_GET['id'] != "")) {
 </script>
 </head>
 
-<body background="images/1180422460.gif">
+<body background="">
 <script src="js/bootstrap.min.js"></script>
 </body>
 </html>

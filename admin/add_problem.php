@@ -161,7 +161,7 @@ code {
 <link rel="stylesheet" href="css/jquery-ui.css">
 </head>
 
-<body background="images/1180422460.gif">
+<body background="images">
 
 <!-- Part 1: Wrap all page content here -->
 <div id="wrap">
@@ -174,16 +174,24 @@ code {
     <a class="brand" href="#"><font color="#660033"> <b>IT Helpdesk</b></font></a>  
       <div class="nav-collapse collapse">
         <ul class="nav">
-         <li><a href="index.php"><i class="icon-home"></i>&nbsp; <font color="#ooooFF"><b>Home</a></b></font></li>
-          <li><a href="adduser.php"><i class="icon-user"></i>&nbsp;Add_User</a></li>
-          <li><a href="add_department.php"><i class="icon-cog"></i>&nbsp;Add_Department</a></li>
-          <li><a href="add_priority.php"><i class="icon-cog"></i>&nbsp;Add_Priority</a></li>
-          <li><a href="add_problem.php"><i class="icon-cog"></i>&nbsp;Add_Problem</a></li>
-          <li><a href="menu_report.php"><i class="icon-book"></i>&nbsp;Report</a></li>
-
-          <li><a href="../login.php"><i class="icon-user"></i>&nbsp; <font color="red"><b>Logout</a></font></b></font></li>
 
 
+ 		 <li><button name="button" class="btn btn-warning">
+          <a href="index.php"><i class="icon-home"></i><font color="#ooooFF"><b> &nbsp; Home&nbsp; &nbsp; </a></b></font></a></button></li>
+          <li><button name="button" class="btn btn-warning">
+          <a href="adduser.php"><i class="icon-user"></i><font color="#ooooFF"><b>&nbsp;Add_User</b>&nbsp; &nbsp;</a></font></button></li>
+          <li><button name="button" class="btn btn-warning">
+          <a href="add_department.php"><i class="icon-cog"></i><font color="#ooooFF">&nbsp;<b>Add_Department</b>&nbsp; &nbsp;</a></font></button></li>
+          <li><button name="button" class="btn btn-warning">
+          <a href="add_priority.php"><i class="icon-cog"></i><font color="#ooooFF">&nbsp;<b>Add_Priority</b>&nbsp; &nbsp;</a></font></button></li>
+          <li><button name="button" class="btn btn-warning">
+          <a href="add_problem.php"><i class="icon-cog"></i><font color="#ooooFF">&nbsp;<b>Add_Problem</b>&nbsp; &nbsp;</a></font></button></li>
+          <li><button name="button" class="btn btn-warning">  
+          <a href="menu_report.php"><i class="icon-book"></i><font color="#ooooFF">&nbsp;<b>Report</b></a></font></button></li>
+          <li><button name="button" class="btn btn-">
+          <a href="../indexlogin.php"><i class="icon-user"></i>&nbsp; <font color="red"><b>&nbsp;Logout&nbsp; &nbsp;</a></b></font></li>
+
+         
         </ul>
         </li>
         </ul>
@@ -203,7 +211,7 @@ code {
 <table width="100%" border="0">
   <tr>
     <td width="240" height="34" align="left"><img src="../images/helpdesk logo.png" width="300" height="72"></td>
-    <td width="753" align="center"><p><strong>&nbsp;&nbsp;Add your Problem</strong><strong>&nbsp;&nbsp;</strong></p></td>
+    <td width="753" align="center"><p><strong><font color="#ooooFF"><h3>&nbsp;&nbsp;Add your Problem</h3></font></strong><strong>&nbsp;&nbsp;</strong></p></td>
     <td width="329" align="center"><strong>
       <button type="button" class="btn btn-success"><i class="icon-calendar"></i>&nbsp;Date :: Time : <?php echo $date."&nbsp;/&nbsp;".$time;?></strong></button></td>
   </tr>
@@ -213,7 +221,7 @@ code {
 <form action="<?php echo $editFormAction; ?>" name="adduser" method="POST">
   <table width="315" border="0" align="center">
     <tr>
-      <td width="214"><strong><i class="icon-home"></i>&nbsp;Add Problem</strong></td>
+      <td width="214"><strong><i class="icon-"></i><font color ="#ooooFF">&nbsp;<h5>Add Problem</h5></font></strong></td>
       <td width="166" align="center">&nbsp;</td>
     </tr>
     <tr>

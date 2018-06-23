@@ -18,7 +18,7 @@ function MM_preloadImages() { //v3.0
 </script>
 </head>
 
-<body background="images/1180422460.gif">
+<body background="images">
 <table width="100%" border="0">
   <tr>
     <td class="btn-success">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="icon/Tools.png" width="32" height="32" /> &nbsp;<strong>ระบบแจ้งซ่อมออนไลน์ ( Peaceresort )</strong></td>

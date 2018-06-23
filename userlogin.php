@@ -39,7 +39,7 @@ if (isset($_POST['username'])) {
   $MM_fldUserAuthorization = "";
 
   $MM_redirectLoginSuccess = "index.php";
-  $MM_redirectLoginFailed = "Login.php";
+  $MM_redirectLoginFailed = "indexLogin.php";
 
 
   $MM_redirecttoReferrer = false;
@@ -153,7 +153,7 @@ code {
 </head>
 
 
-<body background="images/1180422460.gif">     <!--blakkground -->
+<body background="images">     <!--blakkground -->
 
 
 
@@ -170,12 +170,14 @@ code {
           <a class="brand" href="#"><font color="#660033"> <b>IT Helpdesk</b></font></a>  
           <div class="nav-collapse collapse">
         <ul class="nav">
-             <li><a href="Login.php"><i class="icon-home"></i>&nbsp; <font color="#ooooFF"><b>Home</a></b></font></li>
-              <li><a href="Login.php"><i class="icon-wrench"></i>&nbsp;Maintennace</a></li>
-              <li><a href="Login.php"><i class="icon-barcode"></i>&nbsp;Inventory</a></li>
+             <li><button name="button" class="btn btn-warning">  <a href="indexlogin.php"><i class="icon-home"></i>&nbsp; <font color="#ooooFF"><b>Home</a></b></font></button></li>
+
+             <li><button name="button" class="btn btn-warning">  <a href="form2mail.html"><i class="icon-home"></i>&nbsp; <font color="#ooooFF"><b>Sent E-mail to IT </a></b></font></button></li>
+
+             
+            
               
-            </ul>
-        </li>
+        
         </ul>
       </div>
 <!--/.nav-collapse --> 
@@ -199,8 +201,8 @@ code {
       <tr>
     <td width="240" height="34" align="left"><img src="images/helpdesk logo.png" width="300" height="72"></td>
 
-    <td width="753" align="center"><p><strong><font color="#ooooFF">
-    	<b><H1>  Welcome  to  IT Helpdesk<H1></b></font></strong></p></td>
+    <td width="753" align="center"><p><strong>
+    	<font color="#ooooFF"><b><H1> Welcome  to  IT  Services Helpdesk <H1></b></font></strong></p></td>
  
     <td width="329" align="center"><strong><button type="button" class="btn btn-success"><i class="icon-calendar"></i>&nbsp;Date :: Time : <?php echo $date."&nbsp;/&nbsp;".$time;?></strong></button></td>
   </tr>

@@ -106,7 +106,7 @@ function MM_swapImage() { //v3.0
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 </head>
 
-<body background="images/1180422460.gif" onload="MM_preloadImages('icon/Back1.png')">
+<body background="images" onload="MM_preloadImages('icon/Back1.png')">
 
 
 
