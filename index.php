@@ -286,21 +286,16 @@ code {
   </tr>
   <?php do { ?>
     <tr>
-      <td><?php echo $row_AJ ['name']; ?></td>
-      <td><?php echo $row_AJ['datepicker']; ?> <strong>/ </strong><?php echo $row_AJ['time']; ?></td>
-      <td><?php echo $row_AJ['department']; ?></td>
-      <td><a href="sendoutsite_report.php?id=<?php echo $row_AJ['id']; ?>"><?php echo $row_AJ['details']; ?></a></td>
-      <td><?php echo $row_AJ['status']; ?></td>
-      <td><?php echo $row_AJ['comment']; ?></td>
-
-       <td width="6%"><a href="editjob.php?id=<?php echo $row_AND['id']; ?>">
+      <td><?php echo $row_AND['name']; ?></td>
+      <td><?php echo $row_AND['datepicker']; ?> <strong>:</strong> <?php echo $row_AND['time']; ?></td>
+      <td><?php echo $row_AND['details']; ?></td>
+      <td><?php echo $row_AND['status']; ?></td>
+      <td width="6%"><a href="editjob.php?id=<?php echo $row_AND['id']; ?>">
         <button type="button" name="btnsubmit" class="btn btn-mini btn-success"><i class="icon-pencil"></i>&nbsp;Edit&nbsp;&nbsp;&nbsp;&nbsp;</button>
       </a></td>
-
      
-
     </tr>
-    <?php } while ($row_AJ = mysql_fetch_assoc($AJ));($row_AND = mysql_fetch_assoc($AND)); ?>
+    <?php } while ($row_AND = mysql_fetch_assoc($AND)); ?>
 
    
 </table>

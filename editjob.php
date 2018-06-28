@@ -177,8 +177,8 @@ $(function() {
   <div class="navbar-inner">
     <div class="container">
       <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-      <a class="brand" href="#"><font color ="#ooooFF"></h3><b>IT  Services Helpdesk :: Edit your job</b></font></h3></a>
-      <div class="nav-collapse collapse">/
+      <a class="brand" href="#"><font color ="#ooooFF"><h4>IT  Services Helpdesk:: Edit your job</h4></font></a>
+      <div class="nav-collapse collapse">
         </li>
         </ul>
       </div>
@@ -189,22 +189,20 @@ $(function() {
 <p></p>
   <br>
   <?
- date_default_timezone_set("Asia/Bangkok");
+ date_default_timezone_set("Asia/Bangkok"); //date time 
     $date = date("d-m-Y");
     $time = date("H:i");
     ?>
 </p>
-<br>
+<br>5
 <table width="100%" border="0">
   <tr>
-    <td width="240" height="34" align="left"><img src="images/helpdesk logo.png" width="300" height="72"></td>
-    <td width="753" align="center"><p><strong><font color="#ooooFF">&nbsp;&nbsp;<h3><b>Edit your job</b></h3></strong></font><strong>&nbsp;&nbsp;</strong></p></td>
+    <td width="240" height="34" align="left"><img src="../images/helpdesk logo.png" width="300" height="72"></td>
+    <td width="753" align="center"><p><strong><font color="#ooooFF">&nbsp;&nbsp;<h3>Edit your </h3></font></strong><strong>&nbsp;&nbsp;</strong></p></td>
     <td width="329" align="center"><strong>
-    <button type="button" class="btn btn-success"><i class="icon-calendar"></i>&nbsp;Date :: Time : <?php echo $date."&nbsp;/&nbsp;".$time;?></strong></button></td>
+    <button type="button" class="btn btn-success"><i class="icon-calendar"></i><font color="#ooooFF">&nbsp;Date :: Time : <?php echo $date."&nbsp;/&nbsp;".$time;?></font></strong></button></td>
   </tr>
 </table>
-
-
 <script src="assets/js/bootstrap-transition.js"></script> 
   <script src="assets/js/bootstrap-alert.js"></script> 
   <script src="assets/js/bootstrap-modal.js"></script> 
@@ -219,10 +217,8 @@ $(function() {
   <script src="assets/js/bootstrap-typeahead.js"></script> 
   <script src="js/bootstrap.min.js"></script>
 </p>
-
 <form method="post" name="form1" action="<?php echo $editFormAction; ?>">
   <table align="center">
-  	
     <tr valign="baseline">
       <td height="24" align="left" nowrap><strong><i class="icon-user"></i><font color="#ooooFF">&nbsp;Name</font></strong></td>
       <td><strong><i class="icon-flag"></i><font color="#ooooFF">&nbsp;Piority</font></strong></td>
@@ -241,7 +237,7 @@ $(function() {
     </tr>
     <tr valign="baseline">
       <td height="22" align="left" nowrap><strong><i class="icon-time"></i><font color="#ooooFF">&nbsp;Time</font></strong></td>
-      <td><strong><i class="icon-file"></i><font color="#ooooFF">&nbsp;Subject</font></strong></td>
+      <td><strong><i class="icon-file"></i><font color="#ooooFF">&nbsp;Subject</strong></font></strong></td>
     </tr>
     <tr valign="baseline">
       <td nowrap align="left"><input type="text" name="time" value="<?php echo htmlentities($row_EAD['time'], ENT_COMPAT, 'utf-8'); ?>" size="32"></td>
@@ -274,7 +270,7 @@ $(function() {
       <td colspan="2" align="left" nowrap><input type="text" name="comment" class="mana" value="<?php echo htmlentities($row_EAD['comment'], ENT_COMPAT, 'utf-8'); ?>" size="32"></td>
     </tr>
     <tr valign="baseline">
-      <td height="22" align="left" nowrap><strong><i class="icon-time"></i> <font color="#ooooFF">&nbsp;Status</font></strong></td>
+      <td height="22" align="left" nowrap><strong><i class="icon-time"></i><font color="#ooooFf">&nbsp;Status</font></strong></td>
       <td>&nbsp;</td>
     </tr>
     <tr valign="baseline">
@@ -289,13 +285,10 @@ $(function() {
       </a>
       </td>
     </tr>
-
   </table>
   <input type="hidden" name="MM_update" value="form1">
   <input type="hidden" name="id" value="<?php echo $row_EAD['id']; ?>">
-
 </form>
-
 </body>
 </html><?php
 mysql_free_result($EAD);
