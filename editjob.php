@@ -75,7 +75,7 @@ $totalRows_EAD = mysql_num_rows($EAD);
 <tml lang="en">
 <head>
 <meta charset="utf-8">
-<title><font color="ooooFF"><h3>Edit your job</h3></font></title>
+<title><h3>Edit your job</h3></title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="">
 <meta name="author" content="">
@@ -198,7 +198,8 @@ $(function() {
 <table width="100%" border="0">
   <tr>
     <td width="240" height="34" align="left"><img src="../images/helpdesk logo.png" width="300" height="72"></td>
-    <td width="753" align="center"><p><strong><font color="#ooooFF">&nbsp;&nbsp;<h3>Edit your </h3></font></strong><strong>&nbsp;&nbsp;</strong></p></td>
+    <td width="753" align="center"><p><strong><font color="#ooooFF">&nbsp;&nbsp;<h3>Edit your</h3></font></strong><strong>&nbsp;&nbsp;</strong></p></td>
+
     <td width="329" align="center"><strong>
     <button type="button" class="btn btn-success"><i class="icon-calendar"></i><font color="#ooooFF">&nbsp;Date :: Time : <?php echo $date."&nbsp;/&nbsp;".$time;?></font></strong></button></td>
   </tr>
@@ -223,6 +224,7 @@ $(function() {
       <td height="24" align="left" nowrap><strong><i class="icon-user"></i><font color="#ooooFF">&nbsp;Name</font></strong></td>
       <td><strong><i class="icon-flag"></i><font color="#ooooFF">&nbsp;Piority</font></strong></td>
     </tr>
+
     <tr valign="baseline">
       <td nowrap align="left"><input type="text" name="name" value="<?php echo htmlentities($row_EAD['name'], ENT_COMPAT, 'utf-8'); ?>" size="32"></td>
       <td><input type="text" name="piority" value="<?php echo htmlentities($row_EAD['piority'], ENT_COMPAT, 'utf-8'); ?>" size="32"></td>
@@ -231,14 +233,17 @@ $(function() {
       <td height="22" align="left" nowrap><strong><i class="icon-calendar"></i><font color="#ooooFF">&nbsp;Date </font></strong></td>
       <td><strong><i class="icon-wrench"></i><font color="#ooooFF">&nbsp;Problem</font></strong></td>
     </tr>
+
     <tr valign="baseline">
       <td nowrap align="left"><input type="text" name="datepicker" id="datepicker" value="<?php echo htmlentities($row_EAD['datepicker'], ENT_COMPAT, 'utf-8'); ?>" size="32"></td>
       <td><input type="text" name="problem" value="<?php echo htmlentities($row_EAD['problem'], ENT_COMPAT, 'utf-8'); ?>" size="32"></td>
     </tr>
+
     <tr valign="baseline">
       <td height="22" align="left" nowrap><strong><i class="icon-time"></i><font color="#ooooFF">&nbsp;Time</font></strong></td>
       <td><strong><i class="icon-file"></i><font color="#ooooFF">&nbsp;Subject</strong></font></strong></td>
     </tr>
+    
     <tr valign="baseline">
       <td nowrap align="left"><input type="text" name="time" value="<?php echo htmlentities($row_EAD['time'], ENT_COMPAT, 'utf-8'); ?>" size="32"></td>
       <td><input type="text" name="subject" value="<?php echo htmlentities($row_EAD['subject'], ENT_COMPAT, 'utf-8'); ?>" size="32"></td>

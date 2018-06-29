@@ -310,18 +310,23 @@ code {
 </table>
 <table width="100%" border="0" class="table table-bordered">
   <tr class="btn-success">
-    <td width="10%"><strong><i class="icon-user"></i>&nbsp;Username</strong></td>
+    <td width="8%"><strong><i class="icon-user"></i>&nbsp;Username</strong></td>
     <td width="12%"><strong><i class="icon-calendar"></i>&nbsp;Date :: Time</strong></td>
-    <td width="56%"><strong><i class="icon-file"></i>&nbsp;Details</strong></td>
+     <td width="10%"><strong><i class="icon-time"></i>&nbsp;Subject</strong></td>
+    <td width="20%"><strong><i class="icon-file"></i>&nbsp;Details</strong></td>
     <td width="10%"><strong><i class="icon-time"></i>&nbsp;Status</strong></td>
+    <td width="12%"><strong><i class="icon-time"></i>&nbsp;comment</strong></td>
+
     <td colspan="2"><strong><i class="icon-cog"></i>&nbsp;Option</strong></td>
   </tr>
   <?php do { ?>
     <tr>
       <td><?php echo $row_AND['name']; ?></td>
       <td><?php echo $row_AND['datepicker']; ?> <strong>:</strong> <?php echo $row_AND['time']; ?></td>
+      <td><?php echo $row_AND['subject']; ?></td>
       <td><?php echo $row_AND['details']; ?></td>
       <td><?php echo $row_AND['status']; ?></td>
+       <td><?php echo $row_AND['comment']; ?></td>
       <td width="6%"><a href="edit_adjob.php?id=<?php echo $row_AND['id']; ?>">
         <button type="button" name="btnsubmit" class="btn btn-mini btn-success"><i class="icon-pencil"></i>&nbsp;Edit&nbsp;&nbsp;&nbsp;&nbsp;</button>
       </a></td>
