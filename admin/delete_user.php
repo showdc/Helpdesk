@@ -32,7 +32,7 @@ function GetSQLValueString($theValue, $theType, $theDefinedValue = "", $theNotDe
 }
 
 if ((isset($_GET['id'])) && ($_GET['id'] != "")) {
-  $deleteSQL = sprintf("DELETE FROM ``user`` WHERE id=%s",
+  $deleteSQL = sprintf("DELETE FROM `user` WHERE id=%s",
                        GetSQLValueString($_GET['id'], "int"));
 
   mysql_select_db($database_IT, $IT);

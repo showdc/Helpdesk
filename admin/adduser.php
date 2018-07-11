@@ -31,6 +31,8 @@ function GetSQLValueString($theValue, $theType, $theDefinedValue = "", $theNotDe
 }
 }
 
+
+
 $maxRows_Admin = 10;
 $pageNum_Admin = 0;
 if (isset($_GET['pageNum_Admin'])) {
@@ -40,10 +42,15 @@ $startRow_Admin = $pageNum_Admin * $maxRows_Admin;
 
 
 mysql_select_db($database_IT, $IT);
-$query_Admin = "SELECT * FROM `user`";
+$query_Admin = "SELECT * FROM user";
+
 $query_limit_Admin = sprintf("%s LIMIT %d, %d", $query_Admin, $startRow_Admin, $maxRows_Admin);
 $Admin = mysql_query($query_limit_Admin, $IT) or die(mysql_error());
 $row_Admin = mysql_fetch_assoc($Admin);
+
+
+
+
 
 if (isset($_GET['totalRows_Admin'])) {
   $totalRows_Admin = $_GET['totalRows_Admin'];
@@ -53,7 +60,6 @@ if (isset($_GET['totalRows_Admin'])) {
 }
 $totalPages_Admin = ceil($totalRows_Admin/$maxRows_Admin)-1;
 ?>
-
 
 
 
@@ -200,7 +206,7 @@ code {
   <tr>
     <td width="240" height="34" align="left"><img src="../images/helpdesk logo.png" width="300" height="72"></td>
 
-    <td width="753" align="center"><p><strong><font color="#ooooFF">&nbsp;&nbsp;<h3>Welcome to Administrator index</h3></font></strong><strong>&nbsp;&nbsp;</strong></p></td>
+    <td width="753" align="center"><p><strong><font color="#ooooFF">&nbsp;&nbsp;<h3> ADD User</h3></font></strong><strong>&nbsp;&nbsp;</strong></p></td>
 
     <td width="329" align="center"><strong>
     <button type="button" class="btn btn-success"><i class="icon-calendar"></i>&nbsp;Date :: Time : <?php echo $date."&nbsp;/&nbsp;".$time;?></strong></button></td>
@@ -213,41 +219,41 @@ code {
   <table width="100%" border="0" align="center">
   <tr>
     <td width="20%" height="47">&nbsp;</td>
-    <td width="31%"><strong><i class="icon-calendar"></i>&nbsp; Date :: Register</strong></td>
-    <td width="3%">&nbsp;</td>
+    <td width="31%"><strong><i class="icon-calendar"></i>Date :: Register</strong></td>
+    <td width="3%"></td>
 
     
-    <td width="31%"><strong><i class="icon-picture"></i>&nbsp; Name</strong></td>
-    <td width="15%">&nbsp;</td>
+    <td width="31%"><strong><i class="icon-picture"></i>name</strong></td>
+    <td width="15%"></td>
   </tr>
 
   <tr>
-    <td height="48">&nbsp;</td>
+    <td height="48"></td>
     <td><input type="text" name="date_re" id="datepicker"/ value="<?php echo $date."&nbsp;/&nbsp;".$time;?>"></td>
-    <td width="3%">&nbsp;</td>
-    <td width="31%"><input type="text" name="name" id="textfield"/></td>
-    <td width="15%">&nbsp;</td>
+    <td width="3%"></td>
+    <td width="31%"><input type="text" name="name" id="textfield2"/></td>
+    <td width="15%"></td>
     </tr>
   <tr>
-    <td height="45">&nbsp;</td>
-    <td><strong><i class="icon-user"></i>&nbsp; Username</strong></td>
-    <td width="3%">&nbsp;</td>
-    <td width="31%"><strong> <i class="icon-lock"></i>&nbsp;Password</strong></td>
-    <td width="15%">&nbsp;</td>
+    <td height="45"></td>
+    <td><strong><i class="icon-user"></i>username</strong></td>
+    <td width="3%"></td>
+    <td width="31%"><strong> <i class="icon-lock"></i>password</strong></td>
+    <td width="15%"></td>
     </tr>
   <tr>
-    <td height="34">&nbsp;</td>
+    <td height="34"></td>
     <td><input type="text" name="username" id="textfield3" class="form-control" /></td>
-    <td width="3%">&nbsp;</td>
+    <td width="3%"></td>
     <td width="31%"><input type="password" name="password" id="textfield4" class="form-control" /></td>
-    <td width="15%">&nbsp;</td>
+    <td width="15%"></td>
     </tr>
   <tr>
-    <td height="30">&nbsp;</td>
+    <td height="30"></td>
     <td>&nbsp;</td>
-    <td width="3%">&nbsp;</td>
-    <td width="31%">&nbsp;</td>
-    <td width="15%">&nbsp;</td>
+    <td width="3%"></td>
+    <td width="31%"></td>
+    <td width="15%"></td>
     </tr>
   <tr>
     <td height="37">&nbsp;</td>
@@ -263,8 +269,8 @@ code {
       <table width="100%" border="0" class="table table-bordered">
         <tr class="btn-success">
           <td width="19%" height="23"><strong><i class="icon-calendar"></i>&nbsp;Date :: Register</strong></td>
-          <td width="31%"><strong><i class="icon-user"></i>&nbsp;Name</strong></td>
-          <td width="35%"><strong><i class="icon-user"></i>&nbsp;Username</strong></td>
+          <td width="31%"><strong><i class="icon-user"></i>&nbsp;name</strong></td>
+          <td width="35%"><strong><i class="icon-user"></i>&nbsp;username</strong></td>
           <td colspan="2"><strong><i class="icon-cog"></i>&nbsp;Option</strong></td>
         </tr>
         <?php do { ?>
@@ -272,6 +278,7 @@ code {
             <td><?php echo $row_Admin['date_re']; ?></td>
             <td><?php echo $row_Admin['name']; ?></td>
             <td><?php echo $row_Admin['username']; ?></td>
+
             <td width="7%"><a href="edit_user.php?id=<?php echo $row_Admin['id']; ?>">
               <button type="button" class="btn btn-mini btn-success"><i class="icon-pencil"></i>&nbsp;Edit&nbsp;&nbsp;&nbsp;</button>
             </a></td>
@@ -305,3 +312,4 @@ code {
 </html><?php
 mysql_free_result($Admin);
 ?>
+

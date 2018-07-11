@@ -75,7 +75,9 @@ $totalRows_EAD = mysql_num_rows($EAD);
 <tml lang="en">
 <head>
 <meta charset="utf-8">
-<title>Edit your job</title>
+
+<title>Edit your job</title> <!-- ส่วนแสดง tabber ของหน้าเพจ-->
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="">
 <meta name="author" content="">

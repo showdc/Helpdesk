@@ -1,48 +1,51 @@
-<html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-	
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-
-<title>แบบฟอร์มติดต่อสอบถาม</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>แบบฟอร์ม Send email</title>
 </head>
 
 <body>
 <center><br>
-	<button >
-<b><font color="#ooooFF"> <h4><b>แบบฟอร์มติดต่อสอบถาม</b></h4></font><b></br></br>
+<b>แบบฟอร์ม Send email<b></br></br>
 <form id="form1" name="form1" method="post" action="sendmail.php">
 <table width="415" border="0" cellspacing="1" cellpadding="1">
 <tr>
 <td colspan="2"> </td>
 </tr>
-
 <tr>
-<td> <font color="#ooooFF"><b> ชื่อ-นามสกุลผู้ส่ง</b></font></td>
-<td><input name="name" type="text"></td>
+<td width="179">ชื่อ-นามสกุลผู้ส่ง</td>
+<td width="229"><label>
+<input name="name" type="text" id="name" />
+</label></td>
 </tr>
 <tr>
-<td> <font color="#ooooFF"><b> อีเมล์ผู้ส่ง</b></font></td>
-<td><input name="email" type="text"></td>
+<td>อีเมล์ผู้ส่ง</td>
+<td><label>
+<input name="sender" type="text" id="sender" />
+</label></td>
 </tr>
-
 <tr>
-<td> <font color="#ooooFF"><b> หัวข้อ</b></font></td>
-<td><input name="subject" type="text" id="subject"></td>
+<td>หัวข้อ</td>
+<td><label>
+<input name="header" type="text" id="header" />
+</label></td>
 </tr>
-
 <tr>
-<td valign="top"><font color="#ooooFF"><b> ข้อความ</b></font></td>
-<td><textarea name="details" cols="30" rows="5" wrap="virtual" id="details"></textarea></td>
+<td valign="top">ข้อความ</td>
+<td><label>
+<textarea name="messages" cols="30" rows="5" wrap="virtual" id="messages"></textarea>
+</label></td>
 </tr>
-
 <tr>
-<td colspan="2"><div align="center"><input type="submit" name="Submit" value="Send Mail" /></td>
+<td colspan="2"><div align="center">
+<label>
+<input type="submit" name="Submit" value="Send Mail" />
+</label>
+</td>
 </tr>
-
 </table>
 </form>
 </center>
-</button>
 </body>
-
 </html>
