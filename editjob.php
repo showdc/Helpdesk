@@ -75,7 +75,7 @@ $totalRows_EAD = mysql_num_rows($EAD);
 <tml lang="en">
 <head>
 <meta charset="utf-8">
-<title><h3>Edit your job</h3></title>
+<title>Edit your job</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="">
 <meta name="author" content="">

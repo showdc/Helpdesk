@@ -313,8 +313,6 @@ code {
      
     </tr>
     <?php } while ($row_AND = mysql_fetch_assoc($AND)); ?>
-
-   
 </table>
 <strong>&nbsp;&nbsp;<i class="icon-home"></i>&nbsp;ค้นหาข้อมูลเป็นแผนก</strong>
   </p>
@@ -322,33 +320,42 @@ code {
   <div class="span4" align="left">
     <form action="search.php" method="post" name="search">
     &nbsp;&nbsp;<input name="search" type="text" class="form-control" id="textfield" value="front office" /><br/>
-    &nbsp;&nbsp;<button name="btnSeacrch" type="submit" class="btn btn-success" id="btnSeacrch"><i class="icon-search"></i>&nbsp;ค้นหาข้อมูล</button>
+    &nbsp;&nbsp;<button name="btnSeacrch" type="submit" class="btn btn-success" id="btnSeacrch"><i class="icon-search"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ค้นหาข้อมูล</button>
   </form>
   </div>
-  <div class="span5" align="center">
-  <table width="38%" height="46" border="0" align="center">
-      <tr>
-      	
-    <td height="42" align="center"><?php if ($pageNum_AJ > 0) { // Show if not first page ?>
-            <a href="<?php printf("%s?pageNum_AJ=%d%s", $currentPage, 0, $queryString_AJ); ?>"><button type="button" class="btn btn-mini btn-success">&nbsp;&nbsp;<i class="icon-fast-backward"></i>&nbsp;&nbsp;</button></a>
-        <?php } // Show if not first page ?></td>
-
-
-    <td align="center"><?php if ($pageNum_AJ > 0) { // Show if not first page ?>
-            <a href="<?php printf("%s?pageNum_AJ=%d%s", $currentPage, max(0, $pageNum_AJ - 1), $queryString_AJ); ?>"><button type="button" class="btn btn-mini btn-success">&nbsp;&nbsp;<i class="icon-backward"></i>&nbsp;&nbsp;</button></a>
-        <?php } // Show if not first page ?></td>
-
-
-    <td align="center"><?php if ($pageNum_AJ < $totalPages_AJ) { // Show if not last page ?>
-            <a href="<?php printf("%s?pageNum_AJ=%d%s", $currentPage, min($totalPages_AJ, $pageNum_AJ + 1), $queryString_AJ); ?>"><button type="button" class="btn btn-mini btn-success">&nbsp;&nbsp;<i class=" icon-forward"></i>&nbsp;&nbsp;</button></a>
-        <?php } // Show if not last page ?></td>
-
-
-    <td align="center"><?php if ($pageNum_AJ < $totalPages_AJ) { // Show if not last page ?>
-            <a href="<?php printf("%s?pageNum_AJ=%d%s", $currentPage, $totalPages_AJ, $queryString_AJ); ?>"><button type="button" class="btn btn-mini btn-success">&nbsp;&nbsp;<i class="icon-fast-forward"></i>&nbsp;&nbsp;</button></a>
-        <?php } // Show if not last page ?></td>
+<!-- Le javascript
+    ================================================== --> 
+<!-- Placed at the end of the document so the pages load faster --> 
+<script src="assets/js/jquery.js"></script> 
+<script src="assets/js/bootstrap-transition.js"></script> 
+<script src="assets/js/bootstrap-alert.js"></script> 
+<script src="assets/js/bootstrap-modal.js"></script> 
+<script src="assets/js/bootstrap-dropdown.js"></script> 
+<script src="assets/js/bootstrap-scrollspy.js"></script> 
+<script src="assets/js/bootstrap-tab.js"></script> 
+<script src="assets/js/bootstrap-tooltip.js"></script> 
+<script src="assets/js/bootstrap-popover.js"></script> 
+<script src="assets/js/bootstrap-button.js"></script> 
+<script src="assets/js/bootstrap-collapse.js"></script> 
+<script src="assets/js/bootstrap-carousel.js"></script> 
+<script src="assets/js/bootstrap-typeahead.js"></script> 
+<script src="js/bootstrap.min.js"></script>
+<table width="200" border="0" align="center">
+  <tr>
+    <td align="center"><?php if ($pageNum_AND > 0) { // Show if not first page ?>
+        <a href="<?php printf("%s?pageNum_AND=%d%s", $currentPage, 0, $queryString_AND); ?>"><button type="button" class="btn btn-mini btn-success"><i class="icon-fast-backward"></i></button></a>
+    <?php } // Show if not first page ?></td>
+    <td align="center"><?php if ($pageNum_AND > 0) { // Show if not first page ?>
+        <a href="<?php printf("%s?pageNum_AND=%d%s", $currentPage, max(0, $pageNum_AND - 1), $queryString_AND); ?>"><button type="button" class="btn btn-mini btn-success"><i class="icon-backward"></i></button></a>
+    <?php } // Show if not first page ?></td>
+    <td align="center"><?php if ($pageNum_AND < $totalPages_AND) { // Show if not last page ?>
+        <a href="<?php printf("%s?pageNum_AND=%d%s", $currentPage, min($totalPages_AND, $pageNum_AND + 1), $queryString_AND); ?>"><button type="button" class="btn btn-mini btn-success"><i class="icon-forward"></i></button></a>
+    <?php } // Show if not last page ?></td>
+    <td align="center"><?php if ($pageNum_AND < $totalPages_AND) { // Show if not last page ?>
+        <a href="<?php printf("%s?pageNum_AND=%d%s", $currentPage, $totalPages_AND, $queryString_AND); ?>"><button type="button" class="btn btn-mini btn-success"><i class="icon-fast-forward"></i></button></a>
+    <?php } // Show if not last page ?></td>
   </tr>
-    </table>
+</table>
   </div>
 </div>
 
