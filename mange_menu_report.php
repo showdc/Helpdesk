@@ -2,7 +2,7 @@
 <tml lang="en">
 <head>
 <meta charset="utf-8">
-<title>:: Priority</title>
+<title>:: Report</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="">
 <meta name="author" content="">
@@ -73,6 +73,7 @@ code {
 </head>
 
 <body background="images">
+
 <!-- Part 1: Wrap all page content here -->
 <div id="wrap">
 
@@ -81,9 +82,22 @@ code {
   <div class="navbar-inner">
     <div class="container">
       <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-      <a class="brand" href="#">IT Helpdesk :: Report by user</a>
+   <a class="brand" href="#"><font color="#660033"> <b>IT Helpdesk</b></font></a>  
       <div class="nav-collapse collapse">
         <ul class="nav">
+
+
+            <li> <button name="button" class="btn btn-warning">
+              	<a href="indexmanag.php"><i class="icon-home"></i>&nbsp; <font color="#ooooFF"><b>Home&nbsp;&nbsp;</a></b></font></button></li>
+
+
+          <li><button name="button" class="btn btn-warning"> <a href=" "><i class="icon-user"></i><b><font color="ooooFF">&nbsp;sent E-Mail to IT </b></font></a></button>&nbsp;</li>
+         
+          
+
+            <li><a href="indexlogin.php"><i class="icon-user"></i>&nbsp; <font color="red"><b>Logout</a></font></b></font></li>
+
+          
         </ul>
         </li>
         </ul>
@@ -92,37 +106,62 @@ code {
     </div>
   </div>
 </div>
-<p><br>
+<p></p>
+
+  <br>
+
+  <?
+     date_default_timezone_set("Asia/Bangkok");
+    $date = date("d-m-Y");
+    $time = date("H:i");
+   ?>
+
 </p>
-<form name="search" method="post" action="report_department.php">
-  <p>&nbsp;</p>
-  <p><br>
-  </p>
-  <table width="422" border="0" align="center">
-    <tr>
-    <td height="35"><strong><i class="icon-search"></i>&nbsp;Search&nbsp;by user</strong></td>
-    <td>&nbsp;&nbsp;</td>
-  </tr>
+<br>
+<p>
+<table width="100%" border="0">
   <tr>
-    <td>
-      <input type="text" name="search" id="BtnSearch" class="form-control"/>
-    </td>
-    <td></td>
-  </tr>
-  <tr>
-    <td><button type="submit" name="button" id="button" class="btn btn-success" ><i class="icon-search"></i>&nbsp;Search</button>
-    
-    </td>
-    <td align="left">&nbsp;</td>
+    <td width="240" height="34" align="left"><img src="images/helpdesk logo.png" width="300" height="72"></td>
+    <td width="753" align="center"><p><strong><font color="#ooooFF"><h3>&nbsp;&nbsp;Report System</h3></font></strong><strong>&nbsp;&nbsp;</strong></p></td>
+    <td width="329" align="center"><strong>
+    <button type="button" class="btn btn-success"><i class="icon-calendar"></i>&nbsp;Date :: Time : <?php echo $date."&nbsp;/&nbsp;".$time;?></strong></button></td>
   </tr>
 </table>
-</form>
+<p>&nbsp;</p>
+<table width="40%" border="0" align="center">
+  <tr>
+    <td width="50" align="center">&nbsp;</td>
+  </tr>
+  <tr>
+    <td><button name="button" class="btn btn-">
+    	<strong><a href="admin/rep.php"><i class="icon-book"><font color ="ooooFF"></i>&nbsp;By Summary Report&nbsp;&nbsp;</a></font></strong></button></td>
+  </tr>
+  <tr>
+    <td align="center">&nbsp;</td>
+  </tr>
+  <tr>
+    <td><button name="button" class="btn btn-">
+    	<strong><a href="admin/report.php"><i class="icon-calendar"></i><font color ="ooooFF">&nbsp;By Date : Time&nbsp;&nbsp;&nbsp;</a></font></strong></a></button></td>
+  </tr>
+  <tr>
+    <td align="center">&nbsp;</td>
+  </tr>
+  <tr>
+    <td><button name="button" class="btn btn-">
+    	<a href="admin/search_department.php"><strong><i class="icon-home"><font color="ooooFF"></i>&nbsp;By Department&nbsp;&nbsp;&nbsp;</font></strong></a></button></td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+  </tr>
+</table>
 <p>&nbsp;</p>
 
 <!-- Le javascript
     ================================================== --> 
 <!-- Placed at the end of the document so the pages load faster --> 
-<script src="js/bootstrap.min.js"></script>
 <script src="assets/js/jquery.js"></script> 
 <script src="assets/js/bootstrap-transition.js"></script> 
 <script src="assets/js/bootstrap-alert.js"></script> 

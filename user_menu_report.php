@@ -91,7 +91,7 @@ code {
               	<a href="index.php"><i class="icon-home"></i>&nbsp; <font color="#ooooFF"><b>Home&nbsp;&nbsp;</a></b></font></button></li>
 
 
-          <li><button name="button" class="btn btn-warning"> <a href="form2mail.html"><i class="icon-user"></i><b><font color="ooooFF">&nbsp;sent E-Mail to IT </b></font></a></button>&nbsp;</li>
+          <li><button name="button" class="btn btn-warning"> <a href=" "><i class="icon-user"></i><b><font color="ooooFF">&nbsp;sent E-Mail to IT </b></font></a></button>&nbsp;</li>
          
           
 

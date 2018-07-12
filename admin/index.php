@@ -246,7 +246,7 @@ code {
 <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
 <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
 <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
-<link rel="shortcut icon" href="assets/ico/favicon.png">
+<link rel="shortcut icon" href="../assets/ico/favicon.png">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 </head>
 
@@ -313,7 +313,8 @@ code {
     <td width="8%"><strong><i class="icon-user"></i>&nbsp;Username</strong></td>
     <td width="12%"><strong><i class="icon-calendar"></i>&nbsp;Date :: Time</strong></td>
      <td width="10%"><strong><i class="icon-time"></i>&nbsp;Subject</strong></td>
-    <td width="20%"><strong><i class="icon-file"></i>&nbsp;Details</strong></td>
+       <td width="10%"><strong><i class="icon-file"></i>&nbsp;Problem</strong></td>
+    <td width="10%"><strong><i class="icon-file"></i>&nbsp;Details</strong></td>
     <td width="10%"><strong><i class="icon-time"></i>&nbsp;Status</strong></td>
     <td width="12%"><strong><i class="icon-time"></i>&nbsp;comment</strong></td>
 
@@ -325,6 +326,7 @@ code {
       <td><a href="../sendoutsite_report.php?id=<?php echo $row_AND['id']; ?>"><?php echo $row_AND['datepicker']; ?> 
       	<strong>:</strong> <?php echo $row_AND['time']; ?></td>
       <td><a href="../sendoutsite_report.php?id=<?php echo $row_AND['id']; ?>"><?php echo $row_AND['subject']; ?></td>
+      	 <td><a href="../sendoutsite_report.php?id=<?php echo $row_AND['id']; ?>"><?php echo $row_AND['problem']; ?></td>
       <td><a href="../sendoutsite_report.php?id=<?php echo $row_AND['id']; ?>"><?php echo $row_AND['details']; ?></td>
       <td><a href="../sendoutsite_report.php?id=<?php echo $row_AND['id']; ?>"><?php echo $row_AND['status']; ?></td>
        <td><a href="../sendoutsite_report.php?id=<?php echo $row_AND['id']; ?>"><?php echo $row_AND['comment']; ?></td>

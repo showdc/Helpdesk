@@ -111,7 +111,7 @@ code {
   </tr>
   <tr>
     <td><button type="submit" name="button" id="button" class="btn btn-success"><i class="icon-search"></i>&nbsp;Search</button>
-    <a href="menu_report.php"><button type="button" class="btn btn-danger"><i class="icon-home"></i>&nbsp;Home</button>
+
     </td>
     <td>&nbsp;</td>
   </tr>

@@ -164,7 +164,7 @@ code {
 
               <li><a href="index.php"><i class="icon-home"></i>&nbsp; <font color="#ooooFF"><b>Home</a></b></font></li>
               <li><a href="addjob.php"><i class="icon-file"></i>&nbsp;Add Job</a></li>
-              <li><button name="button" class="btn btn-warning"> <a href="form2mail.html"><i class="icon-user"></i>&nbsp;sent E-Mail to IT </a></button>&nbsp;</li>
+              <li><button name="button" class="btn btn-warning"> <a href=" "><i class="icon-user"></i>&nbsp;sent E-Mail to IT </a></button>&nbsp;</li>
               <li><a href="user_menu_report.php"><i class="icon-book"></i>&nbsp;Report</a></li> <!--  +Reportuser+ -->
               
 

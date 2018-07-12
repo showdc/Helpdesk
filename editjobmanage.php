@@ -53,7 +53,7 @@ if ((isset($_POST["MM_update"])) && ($_POST["MM_update"] == "form1")) {
   mysql_select_db($database_IT, $IT);
   $Result1 = mysql_query($updateSQL, $IT) or die(mysql_error());
 
-  $updateGoTo = "index.php";
+  $updateGoTo = "indexmanag.php";
   if (isset($_SERVER['QUERY_STRING'])) {
     $updateGoTo .= (strpos($updateGoTo, '?')) ? "&" : "?";
     $updateGoTo .= $_SERVER['QUERY_STRING'];
@@ -89,7 +89,7 @@ var r=confirm ('Are you sure?');
 
 if(r==true){
 	
-	window.localtion="index.php";
+	window.localtion="indexmanag.php";
 	}
 	else{
 		
@@ -269,15 +269,13 @@ $(function() {
       <td nowrap align="left">&nbsp;</td>
       <td>&nbsp;</td>
     </tr>
-
-   <!-- <tr valign="baseline">
+    <tr valign="baseline">
       <td height="22" align="left" nowrap><strong><i class="icon-comment"></i><font color="#FF3333">&nbsp;Comment</font></strong></td>
       <td>&nbsp;</td>
     </tr>
     <tr valign="baseline">
       <td colspan="2" align="left" nowrap><input type="text" name="comment" class="mana" value="<?php echo htmlentities($row_EAD['comment'], ENT_COMPAT, 'utf-8'); ?>" size="32"></td>
-    </tr> -->
-
+    </tr>
     <tr valign="baseline">
       <td height="22" align="left" nowrap><strong><i class="icon-time"></i><font color="#ooooFf">&nbsp;Status</font></strong></td>
       <td>&nbsp;</td>
@@ -289,7 +287,7 @@ $(function() {
     <tr valign="baseline">
       <td colspan="2" align="left" nowrap>
       <button type="submit" class="btn btn-success" ><i class="icon-upload"></i>&nbsp;Save&nbsp;</button>
-      <a href="index.php">
+      <a href="indexmanag.php">
       <button type="button" class="btn btn-danger" ><i class="icon-remove"></i>&nbsp;Cancel&nbsp;</button>
       </a>
       </td>

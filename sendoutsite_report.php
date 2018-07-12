@@ -107,7 +107,7 @@ $totalRows_MAR = mysql_num_rows($MAR);
   <table width="100%" border="0">
     <tr>
       <td width="25%" rowspan="4" align="center"><img src="images/New Logo SDC.jpg" width="100" height="50" /></td>
-      <td width="70%" align="center"><h2><strong>Reques From IT Support showdc </strong></h2></td>
+      <td width="80%" align="center"><h2><strong>Reques From IT Support showdc </strong></h2></td>
       <td width="15%" align="center">  
 
     <input name="btnprint" id="btnprint" type="button" onClick="window.print()" value="Print" >

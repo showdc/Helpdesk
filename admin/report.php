@@ -136,7 +136,7 @@ return true;
     </tr>
     <tr>
       <td><button type="submit" name="button" id="button" class="btn btn-success"/><i class="icon-search"></i>&nbsp;Search</button>
-      <a href="menu_report.php"><button type="button" class="btn btn-danger"><i class="icon-home"></i>&nbsp;Home</button></strong></a>
+      
       </td>
       <td align="center">&nbsp;</td>
       <td></td>

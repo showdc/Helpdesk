@@ -278,6 +278,7 @@ code {
             <td><?php echo $row_Admin['date_re']; ?></td>
             <td><?php echo $row_Admin['name']; ?></td>
             <td><?php echo $row_Admin['username']; ?></td>
+            
 
             <td width="7%"><a href="edit_user.php?id=<?php echo $row_Admin['id']; ?>">
               <button type="button" class="btn btn-mini btn-success"><i class="icon-pencil"></i>&nbsp;Edit&nbsp;&nbsp;&nbsp;</button>

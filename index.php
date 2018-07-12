@@ -237,7 +237,7 @@ code {
               	<a href="user_menu_report.php"><i class="icon-book"></i><font color="#ooooFF"><b>&nbsp;&nbsp;Report&nbsp;&nbsp;&nbsp;&nbsp;</b></a></font></button></li> 
               	<!--  +Reportuser+ -->
 				<li><button name="button" class="btn btn-warning">
-              	<a href="form2mail.html"><i class="icon-user"></i>&nbsp;<font color="#ooooFF"><b>sent E-mail to IT&nbsp;&nbsp;</b></a></font></button></li>
+              	<a href="    "><i class="icon-user"></i>&nbsp;<font color="#ooooFF"><b>sent E-mail to IT&nbsp;&nbsp;</b></a></font></button></li>
 
 		  
           <li><button name="button" class="btn btn-">
@@ -280,7 +280,8 @@ code {
     <td width="11%" align="center"><strong><i class="icon-calendar"></i>&nbsp;Date :: Time</strong></td>
     <td width="10%" align="center">><strong><i class="icon-time"></i>&nbsp;Subject</strong></td>
     <td width="15%" align="center"><strong><i class="icon-home"></i>&nbsp;Department</strong></td>
-    <td width="20%" align="center"><strong><i class="icon-file"></i>&nbsp;Details</strong></td>
+    <td width="10%" align="center"><strong><i class="icon-file"></i>&nbsp;Problem</strong></td> 
+     <td width="10%" align="center"><strong><i class="icon-file"></i>&nbsp;Details</strong></td> 
     <td width="11%" align="center"><strong><i class="icon-time"></i>&nbsp;Status</strong></td>
     <td width="15%" align="center"><strong><i class="icon-comment"></i>&nbsp;Comment</strong></td>
     <td width="15%" align="center"><strong><i class="icon-time"></i>&nbsp;Option</strong></td>
@@ -293,6 +294,7 @@ code {
       <strong>:</strong> <?php echo $row_AND['time']; ?></td>
       <td><a href="sendoutsite_report.php?id=<?php echo $row_AND['id']; ?>"><?php echo $row_AND['subject']; ?></td>
       <td><a href="sendoutsite_report.php?id=<?php echo $row_AND['id']; ?>"><?php echo $row_AND['department']; ?></td>
+      	<td><a href="sendoutsite_report.php?id=<?php echo $row_AND['id']; ?>"><?php echo $row_AND['problem']; ?></td>
 	  <td><a href="sendoutsite_report.php?id=<?php echo $row_AND['id']; ?>"><?php echo $row_AND['details']; ?></td>
       <td><a href="sendoutsite_report.php?id=<?php echo $row_AND['id']; ?>"><?php echo $row_AND['status']; ?></td>
       <td><a href="sendoutsite_report.php?id=<?php echo $row_AND['id']; ?>"><?php echo $row_AND['comment']; ?></td>

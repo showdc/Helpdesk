@@ -38,14 +38,14 @@ if (isset($_POST['username'])) {
 
   $MM_fldUserAuthorization = "";
 
-  $MM_redirectLoginSuccess = "index.php";
+  $MM_redirectLoginSuccess = "indexmanag.php";
   $MM_redirectLoginFailed = "indexLogin.php";
 
 
   $MM_redirecttoReferrer = false;
   mysql_select_db($database_IT, $IT);
   
-  $LoginRS__query=sprintf("SELECT username, password FROM `user02` WHERE username=%s AND password=%s",
+  $LoginRS__query=sprintf("SELECT username, password FROM `user03` WHERE username=%s AND password=%s",
 
   
     GetSQLValueString($loginUsername, "text"), GetSQLValueString($password, "text")); 
@@ -78,7 +78,7 @@ if (isset($_POST['username'])) {
 <html lang="en">
     <head>
     <meta charset="utf-8">
-    <title>:: userlogin</title>
+    <title>:: Managelogin </title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -213,7 +213,7 @@ code {
  <form ACTION="<?php echo $loginFormAction; ?>" name="login_admin" method="POST">
  <table width="20%" border="0" align="center">
 
-   <tr> <td height="43" align="center" class="btn-success"><strong>USER Please Login</strong> !</td> </tr>
+   <tr> <td height="43" align="center" class="btn-primary"><strong>Manage Please Login</strong> !</td> </tr>
 
    <tr><td height="39" align="center"><strong><i class="icon-user"></i>&nbsp;Username</strong></td></tr>
 

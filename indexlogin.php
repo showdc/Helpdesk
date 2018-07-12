@@ -3,7 +3,7 @@
 <html lang="en">
     <head>
     <meta charset="utf-8">
-    <title>:: </title>
+    <title>::LOGIN</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -98,7 +98,7 @@ code {
 
         <ul class="nav">
             
-              <li><button name="button" class="btn btn-warning"> <a href="form2mail.html"><i class="icon-user"></i>&nbsp;sent E-Mail to IT </a></button>&nbsp;</li>
+              <li><button name="button" class="btn btn-warning"> <a href="  "><i class="icon-user"></i>&nbsp;sent E-Mail to IT </a></button>&nbsp;</li>
             </ul>
 
         </li>
@@ -141,7 +141,7 @@ code {
 
   
 
-   <tr><td height="32" align="center">
+   <tr><td height="20" align="center">
 
   
  						
@@ -150,11 +150,16 @@ code {
                         <p>&nbsp;</p>
  
 
-   	 <button  class="btn btn-warning"><i class="icon-user"></i>
-   	 	<b><h4> <a href="login.php ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ADMIN&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h4></b></a></button> 
+   	 <button  class="btn btn-primary"><i class="icon-user"></i>
+   	 	<b><h4> <a href="login.php ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ADMIN&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h4></b></a></button> 
 
-   	 	 <button  class="btn btn-info"><i class="icon-user"></i>
-        	 <h4><a href="userlogin.php">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;USER&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<h4></b></a></button> 
+  <p>&nbsp;</p>
+   	 	 <button  class="btn btn-success"><i class="icon-user"></i>
+        	 <h4><a href="managelogin.php">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MANAGE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<h4></b></a></button> 
+   	 		
+   <p>&nbsp;</p>
+   	 	 <button  class="btn btn-warning"><i class="icon-user"></i>
+        	 <h4><a href="userlogin.php">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; USER&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<h4></b></a></button> 
    	 		
 
    	 		  
