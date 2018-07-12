@@ -321,12 +321,14 @@ code {
   </tr>
   <?php do { ?>
     <tr>
-      <td><?php echo $row_AND['name']; ?></td>
-      <td><?php echo $row_AND['datepicker']; ?> <strong>:</strong> <?php echo $row_AND['time']; ?></td>
-      <td><?php echo $row_AND['subject']; ?></td>
-      <td><?php echo $row_AND['details']; ?></td>
-      <td><?php echo $row_AND['status']; ?></td>
-       <td><?php echo $row_AND['comment']; ?></td>
+      <td><a href="../sendoutsite_report.php?id=<?php echo $row_AND['id']; ?>"><?php echo $row_AND['name']; ?></td>
+      <td><a href="../sendoutsite_report.php?id=<?php echo $row_AND['id']; ?>"><?php echo $row_AND['datepicker']; ?> 
+      	<strong>:</strong> <?php echo $row_AND['time']; ?></td>
+      <td><a href="../sendoutsite_report.php?id=<?php echo $row_AND['id']; ?>"><?php echo $row_AND['subject']; ?></td>
+      <td><a href="../sendoutsite_report.php?id=<?php echo $row_AND['id']; ?>"><?php echo $row_AND['details']; ?></td>
+      <td><a href="../sendoutsite_report.php?id=<?php echo $row_AND['id']; ?>"><?php echo $row_AND['status']; ?></td>
+       <td><a href="../sendoutsite_report.php?id=<?php echo $row_AND['id']; ?>"><?php echo $row_AND['comment']; ?></td>
+
       <td width="6%"><a href="edit_adjob.php?id=<?php echo $row_AND['id']; ?>">
         <button type="button" name="btnsubmit" class="btn btn-mini btn-success"><i class="icon-pencil"></i>&nbsp;Edit&nbsp;&nbsp;&nbsp;&nbsp;</button>
       </a></td>

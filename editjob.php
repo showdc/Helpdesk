@@ -196,7 +196,7 @@ $(function() {
     $time = date("H:i");
     ?>
 </p>
-<br>5
+<br>
 <table width="100%" border="0">
   <tr>
     <td width="240" height="34" align="left"><img src="../images/helpdesk logo.png" width="300" height="72"></td>
