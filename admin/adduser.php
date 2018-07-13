@@ -32,9 +32,9 @@ function GetSQLValueString($theValue, $theType, $theDefinedValue = "", $theNotDe
 }
 
 
-
 $maxRows_Admin = 10;
 $pageNum_Admin = 0;
+
 if (isset($_GET['pageNum_Admin'])) {
   $pageNum_Admin = $_GET['pageNum_Admin'];
 }
@@ -222,23 +222,29 @@ code {
     <td width="31%"><strong><i class="icon-calendar"></i>Date :: Register</strong></td>
     <td width="3%"></td>
 
+
     
-    <td width="31%"><strong><i class="icon-picture"></i>name</strong></td>
+    <td width="31%"><strong><i class="icon-picture"></i>::name</strong></td>
     <td width="15%"></td>
   </tr>
 
   <tr>
     <td height="48"></td>
+
+
     <td><input type="text" name="date_re" id="datepicker"/ value="<?php echo $date."&nbsp;/&nbsp;".$time;?>"></td>
     <td width="3%"></td>
+
+
     <td width="31%"><input type="text" name="name" id="textfield2"/></td>
     <td width="15%"></td>
     </tr>
+
   <tr>
     <td height="45"></td>
-    <td><strong><i class="icon-user"></i>username</strong></td>
+    <td><strong><i class="icon-user"></i>::username</strong></td>
     <td width="3%"></td>
-    <td width="31%"><strong> <i class="icon-lock"></i>password</strong></td>
+    <td width="31%"><strong> <i class="icon-lock"></i>::password</strong></td>
     <td width="15%"></td>
     </tr>
   <tr>
@@ -273,11 +279,13 @@ code {
           <td width="35%"><strong><i class="icon-user"></i>&nbsp;username</strong></td>
           <td colspan="2"><strong><i class="icon-cog"></i>&nbsp;Option</strong></td>
         </tr>
+
         <?php do { ?>
           <tr>
             <td><?php echo $row_Admin['date_re']; ?></td>
             <td><?php echo $row_Admin['name']; ?></td>
             <td><?php echo $row_Admin['username']; ?></td>
+
             
 
             <td width="7%"><a href="edit_user.php?id=<?php echo $row_Admin['id']; ?>">

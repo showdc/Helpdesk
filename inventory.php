@@ -230,9 +230,7 @@ code {
               	<a href="inventory.php"><i class="icon-barcode"></i>&nbsp;<font color="#ooooFF"><b>Inventory&nbsp;&nbsp;</b></a></font></button></li>
               
             
-				<li><button name="button" class="btn btn-warning">
-              	<a href=" "><i class="icon-user"></i>&nbsp;<font color="#ooooFF"><b>sent E-mail to IT&nbsp;&nbsp;</b></a></font></button></li>
-
+				  <li><button name="button" class="btn btn-warning">  <a href="https://accounts.google.com/signin/v2/identifier?continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&service=mail&sacu=1&rip=1&flowName=GlifWebSignIn&flowEntry=ServiceLogin"><i class="icon-user"></i>&nbsp;sent E-Mail to IT </a></button>&nbsp;</li>
              
                 <li><a href="indexlogin.php"><i class="icon-user"></i>&nbsp; <font color="red"><b>Logout&nbsp;&nbsp;</a></font></b></li>
 

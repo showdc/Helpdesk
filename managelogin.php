@@ -172,8 +172,7 @@ code {
         <ul class="nav">
              <li><button name="button" class="btn btn-warning">  <a href="indexlogin.php"><i class="icon-home"></i>&nbsp; <font color="#ooooFF"><b>Home</a></b></font></button></li>
 
-             <li><button name="button" class="btn btn-warning">  <a href=" "><i class="icon-home"></i>&nbsp; <font color="#ooooFF"><b>Sent E-mail to IT </a></b></font></button></li>
-
+              <li><button name="button" class="btn btn-warning">  <a href="https://accounts.google.com/signin/v2/identifier?continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&service=mail&sacu=1&rip=1&flowName=GlifWebSignIn&flowEntry=ServiceLogin"><i class="icon-user"></i>&nbsp;sent E-Mail to IT </a></button>&nbsp;</li>
              
             
               

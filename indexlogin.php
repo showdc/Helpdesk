@@ -96,9 +96,10 @@ code {
           <div class="nav-collapse collapse">
 
 
+
         <ul class="nav">
             
-              <li><button name="button" class="btn btn-warning"> <a href="  "><i class="icon-user"></i>&nbsp;sent E-Mail to IT </a></button>&nbsp;</li>
+              <li><button name="button" class="btn btn-warning">  <a href="https://accounts.google.com/signin/v2/identifier?continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&service=mail&sacu=1&rip=1&flowName=GlifWebSignIn&flowEntry=ServiceLogin"><i class="icon-user"></i>&nbsp;sent E-Mail to IT </a></button>&nbsp;</li>
             </ul>
 
         </li>
@@ -126,7 +127,9 @@ code {
     <td width="240" height="34" align="left"><img src="images/helpdesk logo.png" width="300" height="72"></td>
 
     <td width="753" align="center"><p><strong><font color="#ooooFF">
-    	<b><H1>  Welcome  to  IT  Services Helpdesk<H1></b></font></strong></p></td>
+    	<b><H1>  Welcome  to  IT  Services Helpdesk</H1></b></font></strong></p><a class="brand" href="https://accounts.google.com/signin/v2/identifier?continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&service=mail&sacu=1&rip=1&flowName=GlifWebSignIn&flowEntry=ServiceLogin"><font color="#660033"> <b>contact us :: it-support@showdc.co.th</b></font></a>  
+          <div class="nav-collapse collapse"></td>
+
  
     <td width="329" align="center"><strong><button type="button" class="btn btn-success"><i class="icon-calendar"></i>&nbsp;Date :: Time : <?php echo $date."&nbsp;/&nbsp;".$time;?></strong></button></td>
   </tr>

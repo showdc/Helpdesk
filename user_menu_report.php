@@ -90,8 +90,7 @@ code {
             <li> <button name="button" class="btn btn-warning">
               	<a href="index.php"><i class="icon-home"></i>&nbsp; <font color="#ooooFF"><b>Home&nbsp;&nbsp;</a></b></font></button></li>
 
-
-          <li><button name="button" class="btn btn-warning"> <a href=" "><i class="icon-user"></i><b><font color="ooooFF">&nbsp;sent E-Mail to IT </b></font></a></button>&nbsp;</li>
+  <li><button name="button" class="btn btn-warning">  <a href="https://accounts.google.com/signin/v2/identifier?continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&service=mail&sacu=1&rip=1&flowName=GlifWebSignIn&flowEntry=ServiceLogin"><i class="icon-user"></i>&nbsp;sent E-Mail to IT </a></button>&nbsp;</li>
          
           
 
