@@ -63,7 +63,7 @@ $totalPages_Admin = ceil($totalRows_Admin/$maxRows_Admin)-1;
 
 
 
-
+<!--///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
 
 
 <!DOCTYPE html>
@@ -138,6 +138,7 @@ code {
 	font-size: 80%;
 }
 </style>
+<!--///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
 <link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
 
 <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
@@ -171,18 +172,25 @@ code {
 
           <li><button name="button" class="btn btn-warning">
           <a href="index.php"><i class="icon-home"></i><font color="#ooooFF"><b> &nbsp; Home&nbsp; &nbsp; </a></b></font></a></button></li>
+
           <li><button name="button" class="btn btn-warning">
           <a href="adduser.php"><i class="icon-user"></i><font color="#ooooFF"><b>&nbsp;Add_User</b>&nbsp; &nbsp;</a></font></button></li>
+
           <li><button name="button" class="btn btn-warning">
           <a href="add_department.php"><i class="icon-cog"></i><font color="#ooooFF">&nbsp;<b>Add_Department</b>&nbsp;&nbsp;</a></font></button></li>
+
           <li><button name="button" class="btn btn-warning">
           <a href="add_priority.php"><i class="icon-cog"></i><font color="#ooooFF">&nbsp;<b>Add_Priority</b>&nbsp; &nbsp;</a></font></button></li>
+
           <li><button name="button" class="btn btn-warning">
           <a href="add_problem.php"><i class="icon-cog"></i><font color="#ooooFF">&nbsp;<b>Add_Problem</b>&nbsp; &nbsp;</a></font></button></li>
+
           <li><button name="button" class="btn btn-warning">  
           <a href="menu_report.php"><i class="icon-book"></i><font color="#ooooFF">&nbsp;<b>Report</b></a></font></button></li>
+
           <li><button name="button" class="btn btn-">
           <a href="../indexlogin.php"><i class="icon-user"></i>&nbsp; <font color="red"><b>&nbsp;Logout&nbsp; &nbsp;</a></b></font></li>
+
           
         </ul>
         </li>
@@ -192,6 +200,7 @@ code {
     </div>
   </div>
 </div>
+<!--///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
 <p><br>
   <?
   date_default_timezone_set("Asia/Bangkok");
@@ -200,8 +209,12 @@ code {
     $time = date("H:i");
     ?>
 </p>
+
 <br>
+
+<!--///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
 <p>
+
 <table width="100%" border="0">
   <tr>
     <td width="240" height="34" align="left"><img src="../images/helpdesk logo.png" width="300" height="72"></td>
@@ -269,6 +282,9 @@ code {
     </tr>
 </table>
 </form>
+
+
+<!--///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
 <table width="80%" border="0" align="center">
   <tr>
     <td>&nbsp;
@@ -299,6 +315,7 @@ code {
     </table></td>
   </tr>
 </table>
+<!--///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
 <!-- Le javascript
     ================================================== --> 
 <!-- Placed at the end of the document so the pages load faster --> 

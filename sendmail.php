@@ -1,7 +1,7 @@
 
 
 <?
-$emailto='it-support@showdc.co.th'; //อีเมล์ผู้รับ<br>
+$emailto='siritawatk@gmail.com'; //อีเมล์ผู้รับ<br>
 $subject=$_POST['header']; //หัวข้อ<br>
 $header.= "Content-type: text/html; charset=utf-8\n";<br>
 $header.="from: ".$_POST['name']." E-mail : ".$_POST['mail']; //ชื่อและอีเมลผู้ส่ง<br>

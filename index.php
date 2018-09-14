@@ -135,10 +135,6 @@ if (!empty($_SERVER['QUERY_STRING'])) {
 $queryString_AND = sprintf("&totalRows_AND=%d%s", $totalRows_AND, $queryString_AND);
 ?>
 
-
-
-
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -236,7 +232,35 @@ code {
               <li><button name="button" class="btn btn-warning">
               	<a href="user_menu_report.php"><i class="icon-book"></i><font color="#ooooFF"><b>&nbsp;&nbsp;Report&nbsp;&nbsp;&nbsp;&nbsp;</b></a></font></button></li> 
               	<!--  +Reportuser+ -->
-				  <li><button name="button" class="btn btn-warning">  <a href="https://accounts.google.com/signin/v2/identifier?continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&service=mail&sacu=1&rip=1&flowName=GlifWebSignIn&flowEntry=ServiceLogin"><i class="icon-user"></i>&nbsp;sent E-Mail to IT </a></button>&nbsp;</li>
+
+				  <li><button name="button" class="btn btn-warning">  
+				  
+				  	<div class="contact-us-sidebar">
+    <div class="sidebar-container" id="sidebarList">
+        <div class="sidebar-content" id="sidebar_retail">
+         
+            <div class="contact-name">
+                <span></span>
+                <span></span>
+                    <a href="mailto:ti-support@showdc.co.th"> <i aria-hidden="true" class="fa fa-envelope-o"></i>sent E-Mail to IT  </a>
+            </div>
+            <div class="contact-address">
+               
+            </div>
+            <div class="openning-hour">
+                
+            </div>
+        </div>
+    </div>   </button>&nbsp;</li>
+
+\
+
+
+
+
+
+
+
 
 		  
           <li><button name="button" class="btn btn-">
@@ -285,7 +309,6 @@ code {
     <td width="15%" align="center"><strong><i class="icon-comment"></i>&nbsp;Comment</strong></td>
     <td width="15%" align="center"><strong><i class="icon-time"></i>&nbsp;Option</strong></td>
   </tr>
-
   <?php do { ?>
     <tr>
       <td><a href="sendoutsite_report.php?id=<?php echo $row_AND['id']; ?>"><?php echo $row_AND['name']; ?></td>
@@ -298,13 +321,11 @@ code {
       <td><a href="sendoutsite_report.php?id=<?php echo $row_AND['id']; ?>"><?php echo $row_AND['status']; ?></td>
       <td><a href="sendoutsite_report.php?id=<?php echo $row_AND['id']; ?>"><?php echo $row_AND['comment']; ?></td>
       <td><a href="sendoutsite_report.php?id=<?php echo $row_AND['id']; ?>"><?php echo $row_AND['Edit']; ?>
-
 	     <a href="editjob.php?id=<?php echo $row_AND['id']; ?>">
          <button type="button" name="btnsubmit" class="btn btn-mini btn-success">&nbsp;Edit&nbsp;&nbsp;&nbsp;&nbsp;</button>
           </a></td>
          <td width="6%"><a href="editjob.php?id=<?php echo $row_AND['id']; ?>">
-        
-
+     
     </tr>
     <?php } while ($row_AND = mysql_fetch_assoc($AND)); ?>
 </table>
@@ -352,7 +373,6 @@ code {
 </table>
   </div>
 </div>
-
 <!-- Le javascript
     ================================================== --> 
 <!-- Placed at the end of the document so the pages load faster --> 

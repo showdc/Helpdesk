@@ -217,8 +217,25 @@ code {
               	<a href="inventory.php"><i class="icon-barcode"></i>&nbsp;<font color="#ooooFF"><b>Inventory&nbsp;&nbsp;</b></a></font></button></li>
               
             
-				<li><button name="button" class="btn btn-warning">
-              	<a href=" "><i class="icon-user"></i>&nbsp;<font color="#ooooFF"><b>sent E-mail to IT&nbsp;&nbsp;</b></a></font></button></li>
+				 <li><button name="button" class="btn btn-warning">  
+				  
+				  	<div class="contact-us-sidebar">
+    <div class="sidebar-container" id="sidebarList">
+        <div class="sidebar-content" id="sidebar_retail">
+         
+            <div class="contact-name">
+                <span></span>
+                <span></span>
+                    <a href="mailto:ti-support@showdc.co.th"> <i aria-hidden="true" class="fa fa-envelope-o"></i>sent E-Mail to IT  </a>
+            </div>
+            <div class="contact-address">
+               
+            </div>
+            <div class="openning-hour">
+                
+            </div>
+        </div>
+    </div>   </button>&nbsp;</li>
 
              
                 <li><a href="indexlogin.php"><i class="icon-user"></i>&nbsp; <font color="red"><b>Logout&nbsp;&nbsp;</a></font></b></li>

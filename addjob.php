@@ -214,6 +214,7 @@ if(document.addjob.details.value == "")
 document.addjob.submit(); 
 }
 </script>
+
 <link rel="stylesheet" href="css/jquery-ui.css">
 <script src="js/jquery-1.10.2.js"></script>
 <script src="js/jquery-ui.js"></script>
@@ -222,6 +223,8 @@ $(function() {
     $( "#datepicker" ).datepicker({dateFormat:'yy-mm-dd'});
   });
 </script>
+
+
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 </head>
 
@@ -241,13 +244,31 @@ $(function() {
         <ul class="nav">
 
               <li> <button name="button" class="btn btn-warning">
-              	<a href="index.php"><i class="icon-home"></i>&nbsp; <font color="#ooooFF"><b>Home&nbsp;&nbsp;</a></b></font></button></li>
+              	<a href="index.php">&nbsp; <font color="#ooooFF"><b>Home&nbsp;&nbsp;</a></b></font></button></li>
 
               <li><button name="button" class="btn btn-warning">
-              	<a href="addjob.php"><i class="icon-file"></i>&nbsp;<font color="#ooooFF"><b>Add Job&nbsp;&nbsp;</b></a></font></button></li>
+              	<a href="addjob.php">&nbsp;<font color="#ooooFF"><b>Add Job&nbsp;&nbsp;</b></a></font></button></li>
 
             
-				  <li><button name="button" class="btn btn-warning">  <a href="https://accounts.google.com/signin/v2/identifier?continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&service=mail&sacu=1&rip=1&flowName=GlifWebSignIn&flowEntry=ServiceLogin"><i class="icon-user"></i>&nbsp;sent E-Mail to IT </a></button>&nbsp;</li>
+				   <li><button name="button" class="btn btn-warning">  
+				  
+				  	<div class="contact-us-sidebar">
+    <div class="sidebar-container" id="sidebarList">
+        <div class="sidebar-content" id="sidebar_retail">
+         
+            <div class="contact-name">
+                <span></span>
+                <span></span>
+                    <a href="mailto:ti-support@showdc.co.th"> <i aria-hidden="true" class="fa fa-envelope-o"></i>sent E-Mail to IT  </a>
+            </div>
+            <div class="contact-address">
+               
+            </div>
+            <div class="openning-hour">
+                
+            </div>
+        </div>
+    </div>   </button>&nbsp;</li>
 
              
                 <li><a href="indexlogin.php"><i class="icon-user"></i>&nbsp; <font color="red"><b>Logout&nbsp;&nbsp;</a></font></b></li>
@@ -289,11 +310,18 @@ $(function() {
   <table width="30%" border="0" align="center">
   <tr>
     <td height="40"><strong><i class="icon-user"></i><font color ="ooooFF">&nbsp;Username</font></strong></td>
+
+
+
+
     <td><strong><i class="icon-flag"></i><font color ="ooooFF">&nbsp;Priority</font></strong></td>
   </tr>
   <tr>
+
     <td width="21%" height="40"><input name="name" type="text" class="form-control" /></td>
     <td width="21%"><select name="priority" id="select">
+    	
+
       <?php
 do {  
 ?>
@@ -309,7 +337,14 @@ do {
     </select></td>
     </tr>
   <tr>
+
+
+
+
+
     <td height="46"><strong><i class="icon-calendar"></i><font color ="#ooooFF">&nbsp;Date</font></strong></td>
+
+
     <td><strong><i class="icon-wrench"><font color ="ooooFF"></i>&nbsp;Problem</font></strong></td>
     </tr>
   <tr>
@@ -330,12 +365,13 @@ do {
     </select></td>
     </tr>
   <tr>
+
     <td height="47"><strong><i class="icon-time"><font color ="ooooFF"></i>&nbsp;Time</font></strong></td>
     <td><strong><i class="icon-file"></i><font color = "#ooooFF">&nbsp;Subject</font></strong></td>
     </tr>
   <tr>
     <td height="41"><input type="text" name="time" value="<? echo $time?>"></td>
-    <td><input type="text" name="subject" id="textfield"></td>
+    <td><input type="text" name="subject" id="textfield" size="2" ></td>
     </tr>
   <tr>
     <td height="33"><strong><i class="icon-home"></i><font color= "ooooFF">&nbsp;Department</font> </strong></td>
@@ -362,7 +398,7 @@ do {
     </tr>
 
   <tr>
-    <td height="34"><strong><i class="icon-comment"></i><font color ="ooooFF">&nbsp;Discriptio </font></strong></td>
+    <td height="34"><strong><i class="icon-comment"></i><font color ="ooooFF">&nbsp;Discription </font></strong></td>
     <td>&nbsp;</td>
     </tr>
 

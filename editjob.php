@@ -37,7 +37,16 @@ if (isset($_SERVER['QUERY_STRING'])) {
 }
 
 if ((isset($_POST["MM_update"])) && ($_POST["MM_update"] == "form1")) {
-  $updateSQL = sprintf("UPDATE addjob SET name=%s, datepicker=%s, `time`=%s, department=%s, piority=%s, subject=%s, problem=%s, details=%s, `comment`=%s, status=%s WHERE id=%s",
+  $updateSQL = sprintf("UPDATE addjob SET name=%s, 
+  	datepicker=%s, 
+  	`time`=%s, 
+  	department=%s, 
+  	piority=%s, 
+  	subject=%s, 
+  	problem=%s, 
+  	details=%s, 
+  	`comment`=%s, 
+  	status=%s WHERE id=%s",
                        GetSQLValueString($_POST['name'], "text"),
                        GetSQLValueString($_POST['datepicker'], "date"),
                        GetSQLValueString($_POST['time'], "text"),
@@ -71,6 +80,8 @@ $EAD = mysql_query($query_EAD, $IT) or die(mysql_error());
 $row_EAD = mysql_fetch_assoc($EAD);
 $totalRows_EAD = mysql_num_rows($EAD);
 ?>
+
+
 <!DOCTYPE html>
 <tml lang="en">
 <head>
@@ -222,15 +233,23 @@ $(function() {
 </p>
 <form method="post" name="form1" action="<?php echo $editFormAction; ?>">
   <table align="center">
+  	<!-- ======================================================================================================== -->
+
     <tr valign="baseline">
-      <td height="24" align="left" nowrap><strong><i class="icon-user"></i><font color="#ooooFF">&nbsp;Name</font></strong></td>
+      <td height="24" align="left" nowrap>
+      	<strong><i class="icon-user"></i>
+      	<font color="#ooooFF">&nbsp;Name</font></strong></td>
       <td><strong><i class="icon-flag"></i><font color="#ooooFF">&nbsp;Piority</font></strong></td>
     </tr>
+
 
     <tr valign="baseline">
       <td nowrap align="left"><input type="text" name="name" value="<?php echo htmlentities($row_EAD['name'], ENT_COMPAT, 'utf-8'); ?>" size="32"></td>
       <td><input type="text" name="piority" value="<?php echo htmlentities($row_EAD['piority'], ENT_COMPAT, 'utf-8'); ?>" size="32"></td>
     </tr>
+
+
+    <!-- ======================================================================================================== -->
     <tr valign="baseline">
       <td height="22" align="left" nowrap><strong><i class="icon-calendar"></i><font color="#ooooFF">&nbsp;Date </font></strong></td>
       <td><strong><i class="icon-wrench"></i><font color="#ooooFF">&nbsp;Problem</font></strong></td>
@@ -270,13 +289,6 @@ $(function() {
       <td>&nbsp;</td>
     </tr>
 
-   <!-- <tr valign="baseline">
-      <td height="22" align="left" nowrap><strong><i class="icon-comment"></i><font color="#FF3333">&nbsp;Comment</font></strong></td>
-      <td>&nbsp;</td>
-    </tr>
-    <tr valign="baseline">
-      <td colspan="2" align="left" nowrap><input type="text" name="comment" class="mana" value="<?php echo htmlentities($row_EAD['comment'], ENT_COMPAT, 'utf-8'); ?>" size="32"></td>
-    </tr> -->
 
     <tr valign="baseline">
       <td height="22" align="left" nowrap><strong><i class="icon-time"></i><font color="#ooooFf">&nbsp;Status</font></strong></td>
